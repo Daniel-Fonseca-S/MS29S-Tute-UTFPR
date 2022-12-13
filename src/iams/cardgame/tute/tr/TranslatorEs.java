@@ -128,6 +128,7 @@ public class TranslatorEs extends Translator
             case "PORTUGUESE": return "Portugués (BR)";
             case "ENGLISH": return "Inglés";
             case "SPANISH": return "Español";
+            case "COLORBACKGROUND": return "Color de fondo";
             case "GREEN": return "Verde";
             case "RED": return "Rojo";
             case "BLUE": return "Azul";
