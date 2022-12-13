@@ -69,8 +69,7 @@ public class CardModel implements Comparable<CardModel>
     {
         try
         {
-            SOURCE_IMAGE = ImageIO.read(
-                    CardModel.class.getResourceAsStream("spanish-deck.png"));
+            SOURCE_IMAGE = ImageIO.read(CardModel.class.getResourceAsStream("spanish-deck.png"));
             
             BACK = SOURCE_IMAGE.getSubimage(WIDTH * (Rank.values().length), 0, WIDTH, HEIGHT);
         }

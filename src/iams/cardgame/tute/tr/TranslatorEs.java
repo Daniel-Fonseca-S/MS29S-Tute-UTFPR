@@ -128,6 +128,9 @@ public class TranslatorEs extends Translator
             case "PORTUGUESE": return "Portugués (BR)";
             case "ENGLISH": return "Inglés";
             case "SPANISH": return "Español";
+            case "GREEN": return "Verde";
+            case "RED": return "Rojo";
+            case "BLUE": return "Azul";
             default: throw new AssertionError();
         }
     }
@@ -142,4 +145,14 @@ public class TranslatorEs extends Translator
     	
     	return new String();
     }
+
+	@Override
+	public String getCardsRemainText(String key) {
+		return "Cartas restantes: " + key;
+	}
+
+	@Override
+	public String getCardsOverdueText(String key) {
+		return "Cartas vencidas: " + key;
+	}
 }

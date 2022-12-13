@@ -3,6 +3,8 @@ package iams.cardgame.tute;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import javax.swing.JFrame;
+
 import iams.cardgame.animators.AnimationController;
 import iams.cardgame.animators.MoveToBackAnimator;
 import iams.cardgame.animators.MoveToFrontAnimator;
@@ -37,6 +39,10 @@ public class TuteGameUI
     
     private int player1Points = -1;
     private int player2Points = -1;
+    
+    private JFrame Frame = null;
+    
+    public Boolean RefreshCardsRemain = false;
     
     class MessageAnimator implements AnimationController.Animator
     {
@@ -109,6 +115,8 @@ public class TuteGameUI
         
         for (int i = 0; i < TuteGame.NUM_CARDS_PER_PLAYER; i ++)
             this.dealNewCards();
+        
+    	refreshCardsRemain(this.game.getDeck().size() + "");
         
         this.controller.add(new ReverseAnimator(this.game.getPinta(), true));
         
@@ -700,6 +708,22 @@ public class TuteGameUI
                     return true;
                 }
             });
+
+        	refreshCardsRemain(this.game.getDeck().size() + "");
         }
+    }
+    
+    public void setFrame(JFrame frame)
+    {
+    	this.Frame = frame;
+    }
+    
+    public String refreshCardsRemain(String remaningCards)
+    {
+        final Languages lg = new Languages();
+        final Translator tr = Translator.get(lg.getDefaultLanguage());
+        RefreshCardsRemain = true;
+        
+        return tr.getCardsRemainText(remaningCards);
     }
 }

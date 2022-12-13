@@ -28,7 +28,7 @@ public class Main extends GraphicsPanel
     
     private static final Font SMALL_FONT = new Font("Times New Roman", Font.BOLD, 22); //$NON-NLS-1$
     
-    private static final Color BACKGROUND_COLOR = new Color(13, 98, 69);
+    private static Color BACKGROUND_COLOR = new Color(13, 98, 69);
     
     public static final int BOARD_WIDTH = 700, BOARD_HEIGHT = 700;
 
@@ -95,6 +95,9 @@ public class Main extends GraphicsPanel
         }
 
         g2.setColor(Color.white);
+
+        String cardsRemain = this.gameUI.refreshCardsRemain(String.valueOf(this.game.getDeck().size()));
+        g2.drawString(cardsRemain, 0 - fm.stringWidth(cardsRemain), 330 + fm.getMaxAscent());
         
         String notification = this.gameUI.getNotification();
         
@@ -102,6 +105,17 @@ public class Main extends GraphicsPanel
         {
             g2.drawString(notification, BOARD_WIDTH / 2 + Card.HEIGHT, BOARD_HEIGHT / 2 + fm.getMaxAscent() / 2);
         }
+        
+        FontMetrics fmPointsTurn = g2.getFontMetrics();
+
+        g2.setFont(new Font("Times New Roman", Font.BOLD, 14));
+        g2.setColor(Color.white);
+        
+        String pointsTurnPlayer1 = this.tr.getCardsOverdueText(String.valueOf(this.game.getPlayer1Baza().size() / 2));
+        g2.drawString(pointsTurnPlayer1, 875 - fmPointsTurn.stringWidth(pointsTurnPlayer1), 645 + fmPointsTurn.getMaxAscent());
+        
+        String pointsTurnPlayer2 = this.tr.getCardsOverdueText(String.valueOf(this.game.getPlayer2Baza().size() / 2));
+        g2.drawString(pointsTurnPlayer2, 875 - fmPointsTurn.stringWidth(pointsTurnPlayer2), 10 + fmPointsTurn.getMaxAscent());
 
         g2.setFont(SMALL_FONT);
         FontMetrics fm2 = g2.getFontMetrics();
@@ -151,13 +165,15 @@ public class Main extends GraphicsPanel
 
         ImageIcon appIcon = new ImageIcon(pathIcon.toString());
 
-        //Taskbar.getTaskbar().setIconImage(appIcon.getImage());
-
         JFrame frame = new JFrame(tr.getWindowTitle());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.add(new Main());
         frame.setLocationByPlatform(true);
+        
+        //JLabel lab1 = new JLabel("U", JLabel.LEFT);
+        //frame.setLayout(new FlowLayout()); 
+        //frame.add(lab1);
 
         JMenuBar menuBar = new JMenuBar();
 
@@ -171,18 +187,42 @@ public class Main extends GraphicsPanel
         JMenuItem english = new JMenuItem(tr.getMenuItemNames("ENGLISH"));
         JMenuItem portuguese = new JMenuItem(tr.getMenuItemNames("PORTUGUESE"));
         JMenuItem spanish = new JMenuItem(tr.getMenuItemNames("SPANISH"));
+        
+        JMenu colorBackground = new JMenu(tr.getMenuItemNames("COLORBACKGROUND"));
+        JMenuItem backgroundGreen = new JMenuItem(tr.getMenuItemNames("GREEN"));
+        JMenuItem backgroundRed = new JMenuItem(tr.getMenuItemNames("RED"));
+        JMenuItem backgroundBlue = new JMenuItem(tr.getMenuItemNames("BLUE"));
 
         menuBar.add(game);
         menuBar.add(options);
 
         options.add(restart);
         options.add(exit);
+        options.add(colorBackground);
 
         game.add(rules);
         game.add(languages);
         languages.add(english);
         languages.add(portuguese);
         languages.add(spanish);
+        colorBackground.add(backgroundGreen);
+        colorBackground.add(backgroundRed);
+        colorBackground.add(backgroundBlue);
+        
+        backgroundGreen.addActionListener(e -> {
+    		BACKGROUND_COLOR = new Color(13, 98, 69);
+            restartGame(frame);
+        });
+
+        backgroundRed.addActionListener(e -> {
+    		BACKGROUND_COLOR = new Color(92, 0, 27);
+            restartGame(frame);
+        });
+
+        backgroundBlue.addActionListener(e -> {
+    		BACKGROUND_COLOR = new Color(0, 53, 95);
+            restartGame(frame);
+        });
 
         rules.addActionListener(e -> {
         	try {
@@ -219,5 +259,6 @@ public class Main extends GraphicsPanel
     	
         frame.setJMenuBar(menuBar);
         frame.setVisible(true);
+        
     }
 }

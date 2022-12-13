@@ -121,6 +121,11 @@ public class TranslatorPtBr extends Translator
             case "PORTUGUESE": return "Português (PT-BR)";
             case "ENGLISH": return "Inglês";
             case "SPANISH": return "Espanhol";
+            case "COLORBACKGROUND": return "Cor de fundo";
+            case "GREEN": return "Verde";
+            case "RED": return "Vermelho";
+            case "BLUE": return "Azul";
+            
             default: throw new AssertionError();
         }
     }
@@ -135,4 +140,14 @@ public class TranslatorPtBr extends Translator
     	
     	return new String();
     }
+
+	@Override
+	public String getCardsRemainText(String key) {
+		return "Cartas restantes: " + key;
+	}
+
+	@Override
+	public String getCardsOverdueText(String key) {
+		return "Cartas vencidas: " + key;
+	}
 }

@@ -36,6 +36,10 @@ abstract public class Translator
 
     abstract public String getMenuItemNames(String key);
 
+    abstract public String getCardsRemainText(String key);
+    
+    abstract public String getCardsOverdueText(String key);
+
     abstract public String getRulesText() throws IOException;
 
     public static Translator get(String defaultLanguage)
