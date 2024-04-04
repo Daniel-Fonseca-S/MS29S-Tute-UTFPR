@@ -44,11 +44,11 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
-      <p class="stat">67.07</p>
+      <p class="stat">67.05</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
-      <p class="stat">165</p>
+      <p class="stat">139</p>
     </div>
   </div>
   <div class="row historical">
@@ -62,7 +62,7 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
-      <p class="stat">51.38</p>
+      <p class="stat">51.90</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
@@ -90,169 +90,143 @@
 <div class="container">
   <div class="row">
     <textarea id="file-source" class="col-md-12">export const Suit = [
-    { &quot;index&quot;: 0, &quot;name&quot;: &quot;Coins&quot; },
-    { &quot;index&quot;: 1, &quot;name&quot;: &quot;Cups&quot; },
-    { &quot;index&quot;: 2, &quot;name&quot;: &quot;Swords&quot; },
-    { &quot;index&quot;: 3, &quot;name&quot;: &quot;Batons&quot; },
+  { index: 0, name: &#039;Coins&#039; },
+  { index: 1, name: &#039;Cups&#039; },
+  { index: 2, name: &#039;Swords&#039; },
+  { index: 3, name: &#039;Batons&#039; }
 ];
 
 export const Rank = [
-    { &quot;index&quot;:  0, &quot;name&quot;: &quot;Ace&quot;,    &quot;relativeValue&quot;: 12, &quot;countValue&quot;: 11 },
-    { &quot;index&quot;:  1, &quot;name&quot;: &quot;V2&quot;,     &quot;relativeValue&quot;:  1, &quot;countValue&quot;:  0 },
-    { &quot;index&quot;:  2, &quot;name&quot;: &quot;V3&quot;,     &quot;relativeValue&quot;: 11, &quot;countValue&quot;: 10 },
-    { &quot;index&quot;:  3, &quot;name&quot;: &quot;V4&quot;,     &quot;relativeValue&quot;:  2, &quot;countValue&quot;:  0 },
-    { &quot;index&quot;:  4, &quot;name&quot;: &quot;V5&quot;,     &quot;relativeValue&quot;:  3, &quot;countValue&quot;:  0 },
-    { &quot;index&quot;:  5, &quot;name&quot;: &quot;V6&quot;,     &quot;relativeValue&quot;:  4, &quot;countValue&quot;:  0 },
-    { &quot;index&quot;:  6, &quot;name&quot;: &quot;V7&quot;,     &quot;relativeValue&quot;:  5, &quot;countValue&quot;:  0 },
-    { &quot;index&quot;:  7, &quot;name&quot;: &quot;V8&quot;,     &quot;relativeValue&quot;:  6, &quot;countValue&quot;:  0 },
-    { &quot;index&quot;:  8, &quot;name&quot;: &quot;V9&quot;,     &quot;relativeValue&quot;:  7, &quot;countValue&quot;:  0 },
-    { &quot;index&quot;:  9, &quot;name&quot;: &quot;Knave&quot;,  &quot;relativeValue&quot;:  8, &quot;countValue&quot;:  2 },
-    { &quot;index&quot;: 10, &quot;name&quot;: &quot;Knight&quot;, &quot;relativeValue&quot;:  9, &quot;countValue&quot;:  3 },
-    { &quot;index&quot;: 11, &quot;name&quot;: &quot;King&quot;,   &quot;relativeValue&quot;: 10, &quot;countValue&quot;:  4 }
+  { index: 0, name: &#039;Ace&#039;, relativeValue: 12, countValue: 11 },
+  { index: 1, name: &#039;V2&#039;, relativeValue: 1, countValue: 0 },
+  { index: 2, name: &#039;V3&#039;, relativeValue: 11, countValue: 10 },
+  { index: 3, name: &#039;V4&#039;, relativeValue: 2, countValue: 0 },
+  { index: 4, name: &#039;V5&#039;, relativeValue: 3, countValue: 0 },
+  { index: 5, name: &#039;V6&#039;, relativeValue: 4, countValue: 0 },
+  { index: 6, name: &#039;V7&#039;, relativeValue: 5, countValue: 0 },
+  { index: 7, name: &#039;V8&#039;, relativeValue: 6, countValue: 0 },
+  { index: 8, name: &#039;V9&#039;, relativeValue: 7, countValue: 0 },
+  { index: 9, name: &#039;Knave&#039;, relativeValue: 8, countValue: 2 },
+  { index: 10, name: &#039;Knight&#039;, relativeValue: 9, countValue: 3 },
+  { index: 11, name: &#039;King&#039;, relativeValue: 10, countValue: 4 }
 ];
 
 export const CardModel =
 {
-    WIDTH: 80,
+  WIDTH: 80,
 
-    HEIGHT: 123,
+  HEIGHT: 123,
 
-    minZ: 0,
+  minZ: 0,
 
-    maxZ: 0,
+  maxZ: 0,
 
-    suitFromName: function(name)
-    {
-        for (let suit of Suit)
-        {
-            if (suit.name == name)
-                return suit;
-        }
-
-        return null;
-    },
-
-    rankFromName: function(name)
-    {
-        for (let rank of Rank)
-        {
-            if (rank.name == name)
-                return rank;
-        }
-
-        return null;
+  suitFromName: function (name) {
+    for (const suit of Suit) {
+      if (suit.name === name) { return suit; }
     }
+
+    return null;
+  },
+
+  rankFromName: function (name) {
+    for (const rank of Rank) {
+      if (rank.name === name) { return rank; }
+    }
+
+    return null;
+  }
 };
 
-export class Card
-{
-    constructor(s, r)
-    {
-        this.s = s;
-        this.r = r;
+export class Card {
+  constructor(s, r) {
+    this.s = s;
+    this.r = r;
 
-        this.suit = Suit[s];
-        this.rank = Rank[r];
+    this.suit = Suit[s];
+    this.rank = Rank[r];
 
-        this.name = this.rank.name + &quot;-&quot; + this.suit.name;
+    this.name = this.rank.name + &#039;-&#039; + this.suit.name;
 
-        this.x = 0;
-        this.y = 0;
-        this.rotation = 0;
+    this.x = 0;
+    this.y = 0;
+    this.rotation = 0;
 
-        this.z = 0;
-        this.moveToFront();
-		
-		this.highlightingEnabled = false;
+    this.z = 0;
+    this.moveToFront();
+
+    this.highlightingEnabled = false;
+  }
+
+  getCardName() {
+    return this.name;
+  }
+
+  moveTo(x, y, rotation) {
+    this.x = x;
+    this.y = y;
+    this.rotation = rotation;
+
+    $(&#039;#&#039; + this.getCardName()).attr(&#039;transform&#039;,
+      &#039;translate(&#039; + x + &#039;,&#039; + y + &#039;) rotate(&#039; + rotation + &#039;,0,0)&#039;);
+  }
+
+  stepTo(x, y, rotation, moveSpeed, rotSpeed) {
+    const d = Math.sqrt((x - this.x) * (x - this.x) + (y - this.y) * (y - this.y));
+
+    let movementCompleted = true;
+
+    let newX = 0; let newY = 0; let newRotation = 0;
+
+    if (d &lt; moveSpeed) {
+      newX = x;
+      newY = y;
+
+      if (rotSpeed !== 0) { newRotation = this.rotation + rotSpeed; } else { newRotation = rotation; }
+    } else {
+      const theta = Math.atan2(y - this.y, x - this.x);
+
+      newX = this.x + moveSpeed * Math.cos(theta);
+      newY = this.y + moveSpeed * Math.sin(theta);
+
+      if (rotSpeed !== 0) {
+        newRotation = this.rotation + rotSpeed;
+      } else {
+        const ratioMovement = moveSpeed / d;
+
+        newRotation = this.rotation + ratioMovement * (rotation - this.rotation);
+      }
+
+      movementCompleted = false;
     }
 
-    getCardName()
-    {
-        return this.name;
-    }
+    this.moveTo(newX, newY, newRotation);
 
-    moveTo(x, y, rotation)
-    {
-        this.x = x;
-        this.y = y;
-        this.rotation = rotation;
+    return movementCompleted;
+  }
 
-        $(&quot;#&quot; + this.getCardName()).attr(&quot;transform&quot;,
-            &#039;translate(&#039; + x + &#039;,&#039; + y + &#039;) rotate(&#039; + rotation + &#039;,0,0)&#039;);
-    }
+  faceUp(faceUp) {
+    const cardName = this.getCardName();
 
-    stepTo(x, y, rotation, moveSpeed, rotSpeed)
-    {
-        const d = Math.sqrt((x - this.x) * (x - this.x) + (y - this.y) * (y - this.y));
+    $(&#039;#&#039; + cardName + &#039;-COVER&#039;).attr(&#039;visibility&#039;, faceUp ? &#039;hidden&#039; : &#039;visible&#039;);
+    $(&#039;#&#039; + cardName + &#039;-FRONT&#039;).attr(&#039;visibility&#039;, faceUp ? &#039;visible&#039; : &#039;hidden&#039;);
+  }
 
-        let movementCompleted = true;
+  setHighlightColor(color) {
+    const cardName = this.getCardName();
 
-        let newX = 0, newY = 0, newRotation = 0;
+    $(&#039;#&#039; + cardName + &#039;-RECT&#039;).attr(&#039;visibility&#039;, !this.highlightingEnabled || color === null ? &#039;hidden&#039; : &#039;visible&#039;);
 
-        if (d &lt; moveSpeed)
-        {
-            newX = x;
-            newY = y;
+    if (this.highlightingEnabled &amp;&amp; color !== null) { $(&#039;#&#039; + cardName + &#039;-RECT&#039;).attr(&#039;stroke&#039;, color); }
+  }
 
-            if (rotSpeed != 0)
-                newRotation = this.rotation + rotSpeed;
-            else
-                newRotation = rotation;
-        }
-        else
-        {
-            const theta = Math.atan2(y - this.y, x - this.x);
+  moveToFront() {
+    this.z = CardModel.maxZ++;
+  }
 
-            newX = this.x + moveSpeed * Math.cos(theta);
-            newY = this.y + moveSpeed * Math.sin(theta);
-
-            if (rotSpeed != 0)
-            {
-                newRotation = this.rotation + rotSpeed;
-            }
-            else
-            {
-                const ratioMovement = moveSpeed / d;
-
-                newRotation = this.rotation + ratioMovement * (rotation - this.rotation);
-            }
-
-            movementCompleted = false;
-        }
-
-        this.moveTo(newX, newY, newRotation);
-
-        return movementCompleted;
-    }
-
-    faceUp(faceUp)
-    {
-        let cardName = this.getCardName();
-
-        $(&quot;#&quot; + cardName + &quot;-COVER&quot;).attr(&quot;visibility&quot;, faceUp ? &quot;hidden&quot; : &quot;visible&quot;);
-        $(&quot;#&quot; + cardName + &quot;-FRONT&quot;).attr(&quot;visibility&quot;, faceUp ? &quot;visible&quot; : &quot;hidden&quot;);
-    }
-	
-	setHighlightColor(color)
-    {
-        let cardName = this.getCardName();
-
-        $(&quot;#&quot; + cardName + &quot;-RECT&quot;).attr(&quot;visibility&quot;, !this.highlightingEnabled || color == null ? &quot;hidden&quot; : &quot;visible&quot;);
-
-        if (this.highlightingEnabled &amp;&amp; color != null)
-            $(&quot;#&quot; + cardName + &quot;-RECT&quot;).attr(&quot;stroke&quot;, color);
-    }
-
-    moveToFront()
-    {
-        this.z = CardModel.maxZ ++;
-    }
-
-    moveToBack()
-    {
-        this.z = CardModel.minZ --;
-    }
-
+  moveToBack() {
+    this.z = CardModel.minZ--;
+  }
 }</textarea>
   </div>
 </div>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="tute">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/out/artifacts/tute_jar/tute.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

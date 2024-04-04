@@ -48,7 +48,7 @@
     </div>
     <div class="col-md-6">
       <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
-      <p class="stat">95</p>
+      <p class="stat">77</p>
     </div>
   </div>
   <div class="row historical">
@@ -91,97 +91,79 @@
   <div class="row">
     <textarea id="file-source" class="col-md-12">const TranslatorEs =
 {
-    getWindowTitle: function()
-    {
-        return &quot;Tute para dos jugadores&quot;;
-    },
+  getWindowTitle: function () {
+    return &#039;Tute para dos jugadores&#039;;
+  },
 
-    getPlayerPointsString: function(playerPoints)
-    {
-        return &quot;Puntos: &quot; + playerPoints;
-    },
+  getPlayerPointsString: function (playerPoints) {
+    return &#039;Puntos: &#039; + playerPoints;
+  },
 
-    getPlayerGamesString: function(player1Games, player2Games)
-    {
-        return &quot;Juegos: &quot; + player1Games + &quot; - &quot; + player2Games;
-    },
+  getPlayerGamesString: function (player1Games, player2Games) {
+    return &#039;Juegos: &#039; + player1Games + &#039; - &#039; + player2Games;
+  },
 
-    getSuitName: function(suit)
-    {
-        switch (suit.name)
-        {
-            case &quot;Batons&quot;: return &quot;Bastos&quot;;
-            case &quot;Cups&quot;:   return &quot;Copas&quot;;
-            case &quot;Swords&quot;: return &quot;Espadas&quot;;
-            case &quot;Coins&quot;:  return &quot;Oros&quot;;
-            default: throw new AssertionError();
-        }
-    },
-    
-	getRankName: function(rank)
-    {
-        switch (rank.name)
-        {
-            case &quot;Ace&quot;:    return &quot;As&quot;;
-            case &quot;V2&quot;:     return &quot;Dos&quot;;
-            case &quot;V3&quot;:     return &quot;Tres&quot;;
-            case &quot;V4&quot;:     return &quot;Cuatro&quot;;
-            case &quot;V5&quot;:     return &quot;Cinco&quot;;
-            case &quot;V6&quot;:     return &quot;Seis&quot;;
-            case &quot;V7&quot;:     return &quot;Siete&quot;;
-            case &quot;V8&quot;:     return &quot;Ocho&quot;;
-            case &quot;V9&quot;:     return &quot;Nueve&quot;;
-            case &quot;Knave&quot;:  return &quot;Sota&quot;;
-            case &quot;Knight&quot;: return &quot;Caballo&quot;;
-            case &quot;King&quot;:   return &quot;Rey&quot;;
-            default: throw new AssertionError();
-        }
-    },
-    
-    getCardNameString: function(currentCard)
-    {
-        return this.getRankName(currentCard.rank) + &quot; de &quot; + this.getSuitName(currentCard.suit);
-    },
-
-    getPlus10DeMonteString: function()
-    {
-        return &quot;+10 de monte&quot;;
-    },
-
-    getChangePintaString: function()
-    {
-        return &quot;Cambio de pinta&quot;;
-    },
-
-    getTuteDeclarationString: function(rank)
-    {
-        return &quot;Tute de &quot; + (rank.name == &quot;King&quot; ? &quot;Reyes&quot; : &quot;Caballos&quot;);
-    },
-
-    getPlusPointsString: function(countValue)
-    {
-        return &quot;+&quot; + countValue;
-    },
-
-    getPlusTwentyFortyPointsString: function(countValue, suit)
-    {
-        return &quot;+&quot; + countValue + &quot; de &quot; + TranslatorEs.getSuitName(suit);
-    },
-
-    getTwentyFortyDeclarationString: function(pintaSuit, declarationSuit)
-    {
-        if (pintaSuit == declarationSuit)
-            return &quot;Cuarenta de &quot; + TranslatorEs.getSuitName(declarationSuit);
-        else
-            return &quot;Veinte de &quot; + TranslatorEs.getSuitName(declarationSuit);
-    },
-
-    getDeclareRenuncioString: function()
-    {
-        return &quot;Renuncio&quot;;
+  getSuitName: function (suit) {
+    switch (suit.name) {
+      case &#039;Batons&#039;: return &#039;Bastos&#039;;
+      case &#039;Cups&#039;: return &#039;Copas&#039;;
+      case &#039;Swords&#039;: return &#039;Espadas&#039;;
+      case &#039;Coins&#039;: return &#039;Oros&#039;;
+      default: throw new AssertionError();
     }
+  },
 
-}
+  getRankName: function (rank) {
+    switch (rank.name) {
+      case &#039;Ace&#039;: return &#039;As&#039;;
+      case &#039;V2&#039;: return &#039;Dos&#039;;
+      case &#039;V3&#039;: return &#039;Tres&#039;;
+      case &#039;V4&#039;: return &#039;Cuatro&#039;;
+      case &#039;V5&#039;: return &#039;Cinco&#039;;
+      case &#039;V6&#039;: return &#039;Seis&#039;;
+      case &#039;V7&#039;: return &#039;Siete&#039;;
+      case &#039;V8&#039;: return &#039;Ocho&#039;;
+      case &#039;V9&#039;: return &#039;Nueve&#039;;
+      case &#039;Knave&#039;: return &#039;Sota&#039;;
+      case &#039;Knight&#039;: return &#039;Caballo&#039;;
+      case &#039;King&#039;: return &#039;Rey&#039;;
+      default: throw new AssertionError();
+    }
+  },
+
+  getCardNameString: function (currentCard) {
+    return this.getRankName(currentCard.rank) + &#039; de &#039; + this.getSuitName(currentCard.suit);
+  },
+
+  getPlus10DeMonteString: function () {
+    return &#039;+10 de monte&#039;;
+  },
+
+  getChangePintaString: function () {
+    return &#039;Cambio de pinta&#039;;
+  },
+
+  getTuteDeclarationString: function (rank) {
+    return &#039;Tute de &#039; + (rank.name === &#039;King&#039; ? &#039;Reyes&#039; : &#039;Caballos&#039;);
+  },
+
+  getPlusPointsString: function (countValue) {
+    return &#039;+&#039; + countValue;
+  },
+
+  getPlusTwentyFortyPointsString: function (countValue, suit) {
+    return &#039;+&#039; + countValue + &#039; de &#039; + TranslatorEs.getSuitName(suit);
+  },
+
+  getTwentyFortyDeclarationString: function (pintaSuit, declarationSuit) {
+    if (pintaSuit === declarationSuit) { return &#039;Cuarenta de &#039; + TranslatorEs.getSuitName(declarationSuit); } else { return &#039;Veinte de &#039; + TranslatorEs.getSuitName(declarationSuit); }
+  },
+
+  getDeclareRenuncioString: function () {
+    return &#039;Renuncio&#039;;
+  }
+
+};
 
 export const Tr = TranslatorEs;</textarea>
   </div>
