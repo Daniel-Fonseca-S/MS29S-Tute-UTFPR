@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - report\files\js_src_cards_js\report.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>report\files\js_src_cards_js\report.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">15.92</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">1</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">9.95</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">4.69</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">__report = {&quot;info&quot;:{&quot;file&quot;:&quot;js_src\\cards.js&quot;,&quot;fileShort&quot;:&quot;js_src\\cards.js&quot;,&quot;fileSafe&quot;:&quot;js_src_cards_js&quot;,&quot;link&quot;:&quot;files/js_src_cards_js/index.html&quot;},&quot;complexity&quot;:{&quot;methodAggregate&quot;:{&quot;cyclomatic&quot;:12,&quot;cyclomaticDensity&quot;:9.6,&quot;halstead&quot;:{&quot;bugs&quot;:1.531,&quot;difficulty&quot;:51.38,&quot;effort&quot;:235936.96,&quot;length&quot;:656,&quot;time&quot;:13107.609,&quot;vocabulary&quot;:128,&quot;volume&quot;:4592,&quot;operands&quot;:{&quot;distinct&quot;:100,&quot;total&quot;:367,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:28,&quot;total&quot;:289,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:14,&quot;sloc&quot;:{&quot;logical&quot;:125,&quot;physical&quot;:165}},&quot;settings&quot;:{&quot;commonjs&quot;:true,&quot;forin&quot;:false,&quot;logicalor&quot;:true,&quot;switchcase&quot;:true,&quot;trycatch&quot;:false,&quot;newmi&quot;:true},&quot;classes&quot;:[{&quot;methodAggregate&quot;:{&quot;cyclomatic&quot;:10,&quot;cyclomaticDensity&quot;:20.408,&quot;halstead&quot;:{&quot;bugs&quot;:0.852,&quot;difficulty&quot;:40.393,&quot;effort&quot;:103261.426,&quot;length&quot;:401,&quot;time&quot;:5736.746,&quot;vocabulary&quot;:83,&quot;volume&quot;:2556.391,&quot;operands&quot;:{&quot;distinct&quot;:61,&quot;total&quot;:224,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:22,&quot;total&quot;:177,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:12,&quot;sloc&quot;:{&quot;logical&quot;:49,&quot;physical&quot;:110}},&quot;errors&quot;:[],&quot;lineEnd&quot;:165,&quot;lineStart&quot;:56,&quot;methods&quot;:[{&quot;cyclomatic&quot;:1,&quot;cyclomaticDensity&quot;:9.091,&quot;halstead&quot;:{&quot;bugs&quot;:0.105,&quot;difficulty&quot;:4.941,&quot;effort&quot;:1562.632,&quot;length&quot;:72,&quot;time&quot;:86.813,&quot;vocabulary&quot;:21,&quot;volume&quot;:316.247,&quot;operands&quot;:{&quot;distinct&quot;:17,&quot;total&quot;:42,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:4,&quot;total&quot;:30,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:2,&quot;sloc&quot;:{&quot;logical&quot;:11,&quot;physical&quot;:19},&quot;errors&quot;:[],&quot;lineEnd&quot;:76,&quot;lineStart&quot;:58,&quot;name&quot;:&quot;constructor&quot;},{&quot;cyclomatic&quot;:1,&quot;cyclomaticDensity&quot;:100,&quot;halstead&quot;:{&quot;bugs&quot;:0.003,&quot;difficulty&quot;:1,&quot;effort&quot;:8,&quot;length&quot;:4,&quot;time&quot;:0.444,&quot;vocabulary&quot;:4,&quot;volume&quot;:8,&quot;operands&quot;:{&quot;distinct&quot;:2,&quot;total&quot;:2,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:2,&quot;total&quot;:2,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:0,&quot;sloc&quot;:{&quot;logical&quot;:1,&quot;physical&quot;:4},&quot;errors&quot;:[],&quot;lineEnd&quot;:81,&quot;lineStart&quot;:78,&quot;name&quot;:&quot;getCardName&quot;},{&quot;cyclomatic&quot;:1,&quot;cyclomaticDensity&quot;:25,&quot;halstead&quot;:{&quot;bugs&quot;:0.059,&quot;difficulty&quot;:3.846,&quot;effort&quot;:676.003,&quot;length&quot;:43,&quot;time&quot;:37.556,&quot;vocabulary&quot;:17,&quot;volume&quot;:175.761,&quot;operands&quot;:{&quot;distinct&quot;:13,&quot;total&quot;:25,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:4,&quot;total&quot;:18,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:3,&quot;sloc&quot;:{&quot;logical&quot;:4,&quot;physical&quot;:9},&quot;errors&quot;:[],&quot;lineEnd&quot;:91,&quot;lineStart&quot;:83,&quot;name&quot;:&quot;moveTo&quot;},{&quot;cyclomatic&quot;:4,&quot;cyclomaticDensity&quot;:16.667,&quot;halstead&quot;:{&quot;bugs&quot;:0.277,&quot;difficulty&quot;:28.318,&quot;effort&quot;:23570.863,&quot;length&quot;:161,&quot;time&quot;:1309.492,&quot;vocabulary&quot;:36,&quot;volume&quot;:832.358,&quot;operands&quot;:{&quot;distinct&quot;:22,&quot;total&quot;:89,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:14,&quot;total&quot;:72,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:5,&quot;sloc&quot;:{&quot;logical&quot;:24,&quot;physical&quot;:43},&quot;errors&quot;:[],&quot;lineEnd&quot;:135,&quot;lineStart&quot;:93,&quot;name&quot;:&quot;stepTo&quot;},{&quot;cyclomatic&quot;:3,&quot;cyclomaticDensity&quot;:100,&quot;halstead&quot;:{&quot;bugs&quot;:0.053,&quot;difficulty&quot;:5.5,&quot;effort&quot;:871.514,&quot;length&quot;:38,&quot;time&quot;:48.417,&quot;vocabulary&quot;:18,&quot;volume&quot;:158.457,&quot;operands&quot;:{&quot;distinct&quot;:12,&quot;total&quot;:22,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:6,&quot;total&quot;:16,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:1,&quot;sloc&quot;:{&quot;logical&quot;:3,&quot;physical&quot;:7},&quot;errors&quot;:[],&quot;lineEnd&quot;:143,&quot;lineStart&quot;:137,&quot;name&quot;:&quot;faceUp&quot;},{&quot;cyclomatic&quot;:5,&quot;cyclomaticDensity&quot;:125,&quot;halstead&quot;:{&quot;bugs&quot;:0.078,&quot;difficulty&quot;:11.571,&quot;effort&quot;:2719.54,&quot;length&quot;:50,&quot;time&quot;:151.086,&quot;vocabulary&quot;:26,&quot;volume&quot;:235.022,&quot;operands&quot;:{&quot;distinct&quot;:14,&quot;total&quot;:27,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:12,&quot;total&quot;:23,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:1,&quot;sloc&quot;:{&quot;logical&quot;:4,&quot;physical&quot;:9},&quot;errors&quot;:[],&quot;lineEnd&quot;:153,&quot;lineStart&quot;:145,&quot;name&quot;:&quot;setHighlightColor&quot;},{&quot;cyclomatic&quot;:1,&quot;cyclomaticDensity&quot;:100,&quot;halstead&quot;:{&quot;bugs&quot;:0.007,&quot;difficulty&quot;:1.5,&quot;effort&quot;:33.688,&quot;length&quot;:8,&quot;time&quot;:1.872,&quot;vocabulary&quot;:7,&quot;volume&quot;:22.459,&quot;operands&quot;:{&quot;distinct&quot;:4,&quot;total&quot;:4,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:3,&quot;total&quot;:4,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:0,&quot;sloc&quot;:{&quot;logical&quot;:1,&quot;physical&quot;:4},&quot;errors&quot;:[],&quot;lineEnd&quot;:158,&quot;lineStart&quot;:155,&quot;name&quot;:&quot;moveToFront&quot;},{&quot;cyclomatic&quot;:1,&quot;cyclomaticDensity&quot;:100,&quot;halstead&quot;:{&quot;bugs&quot;:0.007,&quot;difficulty&quot;:1.5,&quot;effort&quot;:33.688,&quot;length&quot;:8,&quot;time&quot;:1.872,&quot;vocabulary&quot;:7,&quot;volume&quot;:22.459,&quot;operands&quot;:{&quot;distinct&quot;:4,&quot;total&quot;:4,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:3,&quot;total&quot;:4,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:0,&quot;sloc&quot;:{&quot;logical&quot;:1,&quot;physical&quot;:4},&quot;errors&quot;:[],&quot;lineEnd&quot;:163,&quot;lineStart&quot;:160,&quot;name&quot;:&quot;moveToBack&quot;}],&quot;methodAverage&quot;:{&quot;cyclomatic&quot;:2.125,&quot;cyclomaticDensity&quot;:71.97,&quot;halstead&quot;:{&quot;bugs&quot;:0.074,&quot;difficulty&quot;:7.272,&quot;effort&quot;:3684.491,&quot;length&quot;:48,&quot;time&quot;:204.694,&quot;vocabulary&quot;:17,&quot;volume&quot;:221.345,&quot;operands&quot;:{&quot;distinct&quot;:11,&quot;total&quot;:26.875},&quot;operators&quot;:{&quot;distinct&quot;:6,&quot;total&quot;:21.125}},&quot;params&quot;:1.5,&quot;sloc&quot;:{&quot;logical&quot;:6.125,&quot;physical&quot;:12.375}},&quot;name&quot;:&quot;Card&quot;,&quot;maintainability&quot;:66.305}],&quot;dependencies&quot;:[],&quot;errors&quot;:[],&quot;lineEnd&quot;:165,&quot;lineStart&quot;:1,&quot;maintainability&quot;:67.067,&quot;methods&quot;:[{&quot;cyclomatic&quot;:2,&quot;cyclomaticDensity&quot;:40,&quot;halstead&quot;:{&quot;bugs&quot;:0.017,&quot;difficulty&quot;:6,&quot;effort&quot;:298.974,&quot;length&quot;:15,&quot;time&quot;:16.61,&quot;vocabulary&quot;:10,&quot;volume&quot;:49.829,&quot;operands&quot;:{&quot;distinct&quot;:4,&quot;total&quot;:8,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:6,&quot;total&quot;:7,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:1,&quot;sloc&quot;:{&quot;logical&quot;:5,&quot;physical&quot;:10},&quot;errors&quot;:[],&quot;lineEnd&quot;:42,&quot;lineStart&quot;:33,&quot;name&quot;:&quot;&lt;anonymous&gt;&quot;},{&quot;cyclomatic&quot;:2,&quot;cyclomaticDensity&quot;:40,&quot;halstead&quot;:{&quot;bugs&quot;:0.017,&quot;difficulty&quot;:6,&quot;effort&quot;:298.974,&quot;length&quot;:15,&quot;time&quot;:16.61,&quot;vocabulary&quot;:10,&quot;volume&quot;:49.829,&quot;operands&quot;:{&quot;distinct&quot;:4,&quot;total&quot;:8,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:6,&quot;total&quot;:7,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:1,&quot;sloc&quot;:{&quot;logical&quot;:5,&quot;physical&quot;:10},&quot;errors&quot;:[],&quot;lineEnd&quot;:53,&quot;lineStart&quot;:44,&quot;name&quot;:&quot;&lt;anonymous&gt;&quot;},{&quot;cyclomatic&quot;:1,&quot;cyclomaticDensity&quot;:9.091,&quot;halstead&quot;:{&quot;bugs&quot;:0.105,&quot;difficulty&quot;:4.941,&quot;effort&quot;:1562.632,&quot;length&quot;:72,&quot;time&quot;:86.813,&quot;vocabulary&quot;:21,&quot;volume&quot;:316.247,&quot;operands&quot;:{&quot;distinct&quot;:17,&quot;total&quot;:42,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:4,&quot;total&quot;:30,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:2,&quot;sloc&quot;:{&quot;logical&quot;:11,&quot;physical&quot;:19},&quot;errors&quot;:[],&quot;lineEnd&quot;:76,&quot;lineStart&quot;:58,&quot;name&quot;:&quot;constructor&quot;},{&quot;cyclomatic&quot;:1,&quot;cyclomaticDensity&quot;:100,&quot;halstead&quot;:{&quot;bugs&quot;:0.003,&quot;difficulty&quot;:1,&quot;effort&quot;:8,&quot;length&quot;:4,&quot;time&quot;:0.444,&quot;vocabulary&quot;:4,&quot;volume&quot;:8,&quot;operands&quot;:{&quot;distinct&quot;:2,&quot;total&quot;:2,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:2,&quot;total&quot;:2,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:0,&quot;sloc&quot;:{&quot;logical&quot;:1,&quot;physical&quot;:4},&quot;errors&quot;:[],&quot;lineEnd&quot;:81,&quot;lineStart&quot;:78,&quot;name&quot;:&quot;getCardName&quot;},{&quot;cyclomatic&quot;:1,&quot;cyclomaticDensity&quot;:25,&quot;halstead&quot;:{&quot;bugs&quot;:0.059,&quot;difficulty&quot;:3.846,&quot;effort&quot;:676.003,&quot;length&quot;:43,&quot;time&quot;:37.556,&quot;vocabulary&quot;:17,&quot;volume&quot;:175.761,&quot;operands&quot;:{&quot;distinct&quot;:13,&quot;total&quot;:25,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:4,&quot;total&quot;:18,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:3,&quot;sloc&quot;:{&quot;logical&quot;:4,&quot;physical&quot;:9},&quot;errors&quot;:[],&quot;lineEnd&quot;:91,&quot;lineStart&quot;:83,&quot;name&quot;:&quot;moveTo&quot;},{&quot;cyclomatic&quot;:4,&quot;cyclomaticDensity&quot;:16.667,&quot;halstead&quot;:{&quot;bugs&quot;:0.277,&quot;difficulty&quot;:28.318,&quot;effort&quot;:23570.863,&quot;length&quot;:161,&quot;time&quot;:1309.492,&quot;vocabulary&quot;:36,&quot;volume&quot;:832.358,&quot;operands&quot;:{&quot;distinct&quot;:22,&quot;total&quot;:89,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:14,&quot;total&quot;:72,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:5,&quot;sloc&quot;:{&quot;logical&quot;:24,&quot;physical&quot;:43},&quot;errors&quot;:[],&quot;lineEnd&quot;:135,&quot;lineStart&quot;:93,&quot;name&quot;:&quot;stepTo&quot;},{&quot;cyclomatic&quot;:3,&quot;cyclomaticDensity&quot;:100,&quot;halstead&quot;:{&quot;bugs&quot;:0.053,&quot;difficulty&quot;:5.5,&quot;effort&quot;:871.514,&quot;length&quot;:38,&quot;time&quot;:48.417,&quot;vocabulary&quot;:18,&quot;volume&quot;:158.457,&quot;operands&quot;:{&quot;distinct&quot;:12,&quot;total&quot;:22,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:6,&quot;total&quot;:16,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:1,&quot;sloc&quot;:{&quot;logical&quot;:3,&quot;physical&quot;:7},&quot;errors&quot;:[],&quot;lineEnd&quot;:143,&quot;lineStart&quot;:137,&quot;name&quot;:&quot;faceUp&quot;},{&quot;cyclomatic&quot;:5,&quot;cyclomaticDensity&quot;:125,&quot;halstead&quot;:{&quot;bugs&quot;:0.078,&quot;difficulty&quot;:11.571,&quot;effort&quot;:2719.54,&quot;length&quot;:50,&quot;time&quot;:151.086,&quot;vocabulary&quot;:26,&quot;volume&quot;:235.022,&quot;operands&quot;:{&quot;distinct&quot;:14,&quot;total&quot;:27,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:12,&quot;total&quot;:23,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:1,&quot;sloc&quot;:{&quot;logical&quot;:4,&quot;physical&quot;:9},&quot;errors&quot;:[],&quot;lineEnd&quot;:153,&quot;lineStart&quot;:145,&quot;name&quot;:&quot;setHighlightColor&quot;},{&quot;cyclomatic&quot;:1,&quot;cyclomaticDensity&quot;:100,&quot;halstead&quot;:{&quot;bugs&quot;:0.007,&quot;difficulty&quot;:1.5,&quot;effort&quot;:33.688,&quot;length&quot;:8,&quot;time&quot;:1.872,&quot;vocabulary&quot;:7,&quot;volume&quot;:22.459,&quot;operands&quot;:{&quot;distinct&quot;:4,&quot;total&quot;:4,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:3,&quot;total&quot;:4,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:0,&quot;sloc&quot;:{&quot;logical&quot;:1,&quot;physical&quot;:4},&quot;errors&quot;:[],&quot;lineEnd&quot;:158,&quot;lineStart&quot;:155,&quot;name&quot;:&quot;moveToFront&quot;},{&quot;cyclomatic&quot;:1,&quot;cyclomaticDensity&quot;:100,&quot;halstead&quot;:{&quot;bugs&quot;:0.007,&quot;difficulty&quot;:1.5,&quot;effort&quot;:33.688,&quot;length&quot;:8,&quot;time&quot;:1.872,&quot;vocabulary&quot;:7,&quot;volume&quot;:22.459,&quot;operands&quot;:{&quot;distinct&quot;:4,&quot;total&quot;:4,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operators&quot;:{&quot;distinct&quot;:3,&quot;total&quot;:4,&quot;identifiers&quot;:[&quot;__stripped__&quot;]}},&quot;params&quot;:0,&quot;sloc&quot;:{&quot;logical&quot;:1,&quot;physical&quot;:4},&quot;errors&quot;:[],&quot;lineEnd&quot;:163,&quot;lineStart&quot;:160,&quot;name&quot;:&quot;moveToBack&quot;}],&quot;methodAverage&quot;:{&quot;cyclomatic&quot;:2.1,&quot;cyclomaticDensity&quot;:65.576,&quot;halstead&quot;:{&quot;bugs&quot;:0.062,&quot;difficulty&quot;:7.018,&quot;effort&quot;:3007.388,&quot;length&quot;:41.4,&quot;time&quot;:167.077,&quot;vocabulary&quot;:15.6,&quot;volume&quot;:187.042,&quot;operands&quot;:{&quot;distinct&quot;:9.6,&quot;total&quot;:23.1},&quot;operators&quot;:{&quot;distinct&quot;:6,&quot;total&quot;:18.3}},&quot;params&quot;:1.4,&quot;sloc&quot;:{&quot;logical&quot;:5.9,&quot;physical&quot;:11.9}},&quot;module&quot;:&quot;js_src\\cards.js&quot;},&quot;jshint&quot;:{&quot;messages&quot;:[]}}</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ cyclomatic }} <br>
+    Length : {{ halstead.length }} <br>
+    Difficulty : {{ halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>
