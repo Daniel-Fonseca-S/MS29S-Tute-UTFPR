@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MS29S-Tute-UTFPR.iml" filepath="$PROJECT_DIR$/MS29S-Tute-UTFPR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tute.iml" filepath="$PROJECT_DIR$/tute.iml" />
     </modules>
   </component>
 </project>
