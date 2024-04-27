@@ -5,430 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="659c186e-8510-4bb8-b795-ff3e0232af12" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/-t/assets/css/morris.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/css/plato-display.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/css/plato-file.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/css/plato-overview.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/css/plato.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/css/vendor/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/css/vendor/codemirror.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/css/vendor/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/css/vendor/morris.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/font/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/font/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/font/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/font/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/bundles/codemirror.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/bundles/core-bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/codemirror.markpopovertext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/plato-display.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/plato-file.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/plato-overview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/plato-sortable-file-list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/bootstrap-popover.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/bootstrap-tooltip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/codemirror.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/javascript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/closetag.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/colorize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/continuecomment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/continuelist.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/dialog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/foldcode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/formatting.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/javascript-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/loadmode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/match-highlighter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/matchbrackets.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/multiplex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/overlay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/pig-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/runmode-standalone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/runmode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/searchcursor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/simple-hint.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/simple-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/codemirror/util/xml-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/jquery-1.8.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/jquery.fittext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/lodash.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/morris.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/assets/scripts/vendor/raphael-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/display.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_animators_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_animators_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_animators_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_animators_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_animators_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_cards_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_cards_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_cards_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_cards_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_cards_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_gameui_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_gameui_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_gameui_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_gameui_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_gameui_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_movements_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_movements_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_movements_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_movements_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_movements_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_tr_es_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_tr_es_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_tr_es_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_tr_es_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_tr_es_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_tute_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_tute_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_tute_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_tute_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/js_src_tute_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_bundles_codemirror_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_bundles_codemirror_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_bundles_codemirror_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_bundles_codemirror_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_bundles_codemirror_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_bundles_core_bundle_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_bundles_core_bundle_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_bundles_core_bundle_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_bundles_core_bundle_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_bundles_core_bundle_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_codemirror_markpopovertext_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_codemirror_markpopovertext_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_codemirror_markpopovertext_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_codemirror_markpopovertext_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_codemirror_markpopovertext_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_display_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_display_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_display_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_display_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_display_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_file_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_file_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_file_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_file_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_file_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_overview_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_overview_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_overview_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_overview_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_overview_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_sortable_file_list_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_sortable_file_list_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_sortable_file_list_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_sortable_file_list_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_plato_sortable_file_list_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_bootstrap_popover_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_bootstrap_popover_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_bootstrap_popover_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_bootstrap_popover_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_bootstrap_popover_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_bootstrap_tooltip_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_bootstrap_tooltip_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_bootstrap_tooltip_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_bootstrap_tooltip_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_bootstrap_tooltip_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_codemirror_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_codemirror_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_codemirror_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_codemirror_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_codemirror_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_javascript_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_javascript_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_javascript_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_javascript_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_javascript_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_closetag_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_closetag_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_closetag_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_closetag_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_closetag_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_colorize_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_colorize_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_colorize_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_colorize_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_colorize_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_continuecomment_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_continuecomment_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_continuecomment_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_continuecomment_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_continuecomment_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_continuelist_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_continuelist_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_continuelist_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_continuelist_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_continuelist_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_dialog_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_dialog_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_dialog_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_dialog_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_dialog_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_foldcode_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_foldcode_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_foldcode_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_foldcode_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_foldcode_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_formatting_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_formatting_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_formatting_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_formatting_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_formatting_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_javascript_hint_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_javascript_hint_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_javascript_hint_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_javascript_hint_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_javascript_hint_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_loadmode_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_loadmode_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_loadmode_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_loadmode_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_loadmode_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_match_highlighter_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_match_highlighter_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_match_highlighter_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_match_highlighter_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_match_highlighter_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_matchbrackets_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_matchbrackets_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_matchbrackets_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_matchbrackets_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_matchbrackets_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_multiplex_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_multiplex_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_multiplex_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_multiplex_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_multiplex_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_overlay_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_overlay_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_overlay_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_overlay_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_overlay_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_pig_hint_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_pig_hint_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_pig_hint_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_pig_hint_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_pig_hint_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_runmode_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_runmode_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_runmode_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_runmode_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_runmode_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_runmode_standalone_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_runmode_standalone_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_runmode_standalone_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_runmode_standalone_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_runmode_standalone_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_search_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_search_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_search_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_search_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_search_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_searchcursor_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_searchcursor_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_searchcursor_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_searchcursor_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_searchcursor_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_simple_hint_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_simple_hint_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_simple_hint_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_simple_hint_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_simple_hint_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_xml_hint_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_xml_hint_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_xml_hint_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_xml_hint_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_codemirror_util_xml_hint_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_jquery_1_8_3_min_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_jquery_1_8_3_min_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_jquery_1_8_3_min_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_jquery_1_8_3_min_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_jquery_1_8_3_min_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_jquery_fittext_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_jquery_fittext_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_jquery_fittext_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_jquery_fittext_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_jquery_fittext_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_lodash_min_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_lodash_min_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_lodash_min_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_lodash_min_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_lodash_min_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_morris_min_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_morris_min_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_morris_min_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_morris_min_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_morris_min_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_raphael_min_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_raphael_min_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_raphael_min_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_raphael_min_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_assets_scripts_vendor_raphael_min_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_animators_js_report_history_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_animators_js_report_history_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_animators_js_report_history_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_animators_js_report_history_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_animators_js_report_history_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_animators_js_report_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_animators_js_report_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_animators_js_report_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_animators_js_report_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_animators_js_report_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_cards_js_report_history_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_cards_js_report_history_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_cards_js_report_history_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_cards_js_report_history_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_cards_js_report_history_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_cards_js_report_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_cards_js_report_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_cards_js_report_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_cards_js_report_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_cards_js_report_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_gameui_js_report_history_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_gameui_js_report_history_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_gameui_js_report_history_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_gameui_js_report_history_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_gameui_js_report_history_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_gameui_js_report_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_gameui_js_report_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_gameui_js_report_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_gameui_js_report_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_gameui_js_report_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_movements_js_report_history_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_movements_js_report_history_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_movements_js_report_history_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_movements_js_report_history_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_movements_js_report_history_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_movements_js_report_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_movements_js_report_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_movements_js_report_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_movements_js_report_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_movements_js_report_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tr_es_js_report_history_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tr_es_js_report_history_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tr_es_js_report_history_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tr_es_js_report_history_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tr_es_js_report_history_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tr_es_js_report_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tr_es_js_report_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tr_es_js_report_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tr_es_js_report_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tr_es_js_report_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tute_js_report_history_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tute_js_report_history_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tute_js_report_history_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tute_js_report_history_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tute_js_report_history_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tute_js_report_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tute_js_report_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tute_js_report_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tute_js_report_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_files_js_src_tute_js_report_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_report_history_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_report_history_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_report_history_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_report_history_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_report_history_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_report_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_report_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_report_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_report_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/files/report_report_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-t/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/css/morris.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/css/plato-display.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/css/plato-file.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/css/plato-overview.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/css/plato.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/css/vendor/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/css/vendor/codemirror.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/css/vendor/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/css/vendor/morris.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/font/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/font/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/font/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/font/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/bundles/codemirror.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/bundles/core-bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/codemirror.markpopovertext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/plato-display.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/plato-file.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/plato-overview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/plato-sortable-file-list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/bootstrap-popover.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/bootstrap-tooltip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/codemirror.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/javascript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/closetag.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/colorize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/continuecomment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/continuelist.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/dialog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/foldcode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/formatting.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/javascript-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/loadmode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/match-highlighter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/matchbrackets.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/multiplex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/overlay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/pig-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/runmode-standalone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/runmode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/searchcursor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/simple-hint.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/simple-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/codemirror/util/xml-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/jquery-1.8.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/jquery.fittext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/lodash.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/morris.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/assets/scripts/vendor/raphael-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/display.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_animators_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_animators_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_animators_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_animators_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_animators_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_cards_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_cards_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_cards_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_cards_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_cards_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_gameui_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_gameui_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_gameui_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_gameui_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_gameui_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_movements_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_movements_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_movements_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_movements_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_movements_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_tr_es_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_tr_es_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_tr_es_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_tr_es_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_tr_es_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_tute_js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_tute_js/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_tute_js/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_tute_js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/files/js_src_tute_js/report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/report.history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/report.history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/report.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -450,37 +26,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/UTFPR/P8/MS28S/MS29S-Tute-UTFPR",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/UTFPR/P8/MS28S/MS29S-Tute-UTFPR&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="iams.cardgame.tute.Main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="iams.cardgame.tute.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="tute" />
       <method v="2">
@@ -490,6 +52,21 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="tute" />
       <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="iams.cardgame.tute.Main" />
+      <module name="MS29S-Tute-UTFPR" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="iams.cardgame.tute.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
