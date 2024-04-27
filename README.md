@@ -1,6 +1,13 @@
 # MS28S-Tute
+
 Repositorio do projeto Tute de Manutenção de Software
 
-# Alunos:
-- Wesley Adiel Alves de Lima RA: 2003449.
+Alunos:
+
+- Daniel Fonseca da Silva
+- Davi Gil Brito Vaz Takayama
+- João Pedro dos Santos Batista
+- Paulo Moschen
+
+Versão mínima do JDK: 18
 
