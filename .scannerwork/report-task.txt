@@ -1,0 +1,6 @@
+projectKey=tute
+serverUrl=http://localhost:9000
+serverVersion=10.5.0.89998
+dashboardUrl=http://localhost:9000/dashboard?id=tute
+ceTaskId=670e0fac-ace3-42e4-8a4a-a0d52b88ba7b
+ceTaskUrl=http://localhost:9000/api/ce/task?id=670e0fac-ace3-42e4-8a4a-a0d52b88ba7b
