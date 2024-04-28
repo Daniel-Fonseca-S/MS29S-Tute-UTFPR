@@ -97,7 +97,7 @@ public class Main extends GraphicsPanel
         g2.setColor(Color.white);
 
         String cardsRemain = this.gameUI.refreshCardsRemain(String.valueOf(this.game.getDeck().size()));
-        g2.drawString(cardsRemain, 0 - fm.stringWidth(cardsRemain), 330 + fm.getMaxAscent());
+        g2.drawString(cardsRemain, -fm.stringWidth(cardsRemain), 330 + fm.getMaxAscent());
         
         String notification = this.gameUI.getNotification();
         
@@ -130,10 +130,10 @@ public class Main extends GraphicsPanel
                 BOARD_WIDTH / 2 - fm.stringWidth(gameMessage) / 2, 
                 5 + fm.getMaxAscent());
 
-        if (this.humanPlayer.player1Message != null && !this.humanPlayer.player1Message.isEmpty())
+        if (this.humanPlayer.getPlayer1Message() != null && !this.humanPlayer.getPlayer1Message().isEmpty())
         {
-            g2.drawString(this.humanPlayer.player1Message, 
-                    BOARD_WIDTH / 2 - fm2.stringWidth(this.humanPlayer.player1Message) / 2, 
+            g2.drawString(this.humanPlayer.getPlayer1Message(),
+                    BOARD_WIDTH / 2 - fm2.stringWidth(this.humanPlayer.getPlayer1Message()) / 2,
                     BOARD_HEIGHT - fm2.getMaxAscent());
         }
 

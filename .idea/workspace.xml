@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42e0a203-d84c-4f0f-baf6-ae135d7ef9ab" name="Changes" comment="sonar-lint">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_04_2024_16_41__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_04_2024_16_41__Changes_.xml" afterDir="false" />
+    <list default="true" id="42e0a203-d84c-4f0f-baf6-ae135d7ef9ab" name="Changes" comment="nao-sei-mais-o-que-esta-acontecendo">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/iams/cardgame/tute/ai/BasicTuteAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iams/cardgame/tute/ai/BasicTuteAI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/iams/cardgame/tute/ai/SmartTuteAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iams/cardgame/tute/ai/SmartTuteAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iams/cardgame/tute/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iams/cardgame/tute/HumanPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iams/cardgame/tute/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iams/cardgame/tute/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,21 +19,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Daniel-Fonseca-S&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Daniel-Fonseca-S"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Daniel-Fonseca-S/MS29S-Tute-UTFPR.git&quot;,
-    &quot;accountId&quot;: &quot;07a60973-3442-4b54-bd77-0013635baaa8&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Daniel-Fonseca-S/MS29S-Tute-UTFPR.git",
+    "accountId": "07a60973-3442-4b54-bd77-0013635baaa8"
   }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
+}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
   <component name="ProjectId" id="2fhHgH0nnT1aKDO23qLOmCGATCP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -46,7 +47,6 @@
     "Application.Play-tute.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "extract.method.default.visibility": "private",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -87,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714246501985</updated>
-      <workItem from="1714246503465" duration="489000" />
+      <workItem from="1714246503465" duration="9077000" />
     </task>
     <task id="LOCAL-00001" summary="configurações do intellij parte 2">
       <option name="closed" value="true" />
@@ -121,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714247010674</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="nao-sei-mais-o-que-esta-acontecendo">
+      <option name="closed" value="true" />
+      <created>1714247064172</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714247064172</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,10 +151,7 @@
     <MESSAGE value="configurações do intellij parte 3" />
     <MESSAGE value="Deletando arquivos pq o intellij pediu" />
     <MESSAGE value="sonar-lint" />
-    <option name="LAST_COMMIT_MESSAGE" value="sonar-lint" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="nao-sei-mais-o-que-esta-acontecendo" />
+    <option name="LAST_COMMIT_MESSAGE" value="nao-sei-mais-o-que-esta-acontecendo" />
   </component>
 </project>
