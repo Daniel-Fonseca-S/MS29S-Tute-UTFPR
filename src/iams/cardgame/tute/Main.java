@@ -208,20 +208,20 @@ public class Main extends GraphicsPanel
         colorBackground.add(backgroundGreen);
         colorBackground.add(backgroundRed);
         colorBackground.add(backgroundBlue);
-        
+
         backgroundGreen.addActionListener(e -> {
-    		BACKGROUND_COLOR = new Color(13, 98, 69);
-            restartGame(frame);
+            BACKGROUND_COLOR = new Color(13, 98, 69);
+            frame.paint(frame.getGraphics());
         });
 
         backgroundRed.addActionListener(e -> {
-    		BACKGROUND_COLOR = new Color(92, 0, 27);
-            restartGame(frame);
+            BACKGROUND_COLOR = new Color(92, 0, 27);
+            frame.paint(frame.getGraphics());
         });
 
         backgroundBlue.addActionListener(e -> {
-    		BACKGROUND_COLOR = new Color(0, 53, 95);
-            restartGame(frame);
+            BACKGROUND_COLOR = new Color(0, 53, 95);
+            frame.paint(frame.getGraphics());
         });
 
         rules.addActionListener(e -> {
