@@ -117,7 +117,7 @@ public class Card extends CardModel
         this.zValue = MAX_Z_VALUE ++;
     }
 
-    public void draw(Graphics2D g, AffineTransform tx, ImageObserver observer)
+    public void draw(Graphics2D g, ImageObserver observer)
     {
         AffineTransform prevAt = new AffineTransform(g.getTransform());
         g.transform(this.at);

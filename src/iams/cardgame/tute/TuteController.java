@@ -67,24 +67,20 @@ public class TuteController extends AnimationController
     {
         double centering = - (numCards - 1.) / 2 + i;
         
-        MoveCardAnimator player1CardLocation = new MoveCardAnimator(card,
+        return new MoveCardAnimator(card,
                 Main.BOARD_WIDTH / 2 + SEPARATION * centering, 
                 Main.BOARD_HEIGHT - (CardModel.HEIGHT / 2 + 30 + (30 * Math.cos(Math.PI / 8 * centering))), 
                 5 * centering);
-        
-        return player1CardLocation;
     }
 
     Animator getPlayer2CardMovement(Card card, int i, int numCards)
     {
         double centering = - (numCards - 1.) / 2 + i;
         
-        MoveCardAnimator player1CardLocation = new MoveCardAnimator(card,
+        return new MoveCardAnimator(card,
                 Main.BOARD_WIDTH / 2 - SEPARATION * centering, 
                 CardModel.HEIGHT / 2 + 30 + (30 * Math.cos(Math.PI / 8 * centering)), 
                 180 + 5 * centering);
-                
-        return player1CardLocation;
     }
 
     Animator relocatePlayer1Cards(Collection<Card> player1)

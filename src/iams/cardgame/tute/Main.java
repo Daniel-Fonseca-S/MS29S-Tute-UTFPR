@@ -12,7 +12,6 @@ import java.util.Arrays;
 
 import javax.swing.*;
 import javax.swing.JFrame;
-import static javax.swing.ScrollPaneConstants.*;
 
 
 import iams.cardgame.tute.tr.Translator;
@@ -142,7 +141,7 @@ public class Main extends GraphicsPanel
         Arrays.sort(cardRasters, Card.PAINT_COMPARATOR);
         
         for (Card card : cardRasters)
-            card.draw(g2, tx2, this);
+            card.draw(g2, this);
     }
 
     static public void restartGame(JFrame frame) {
@@ -170,10 +169,6 @@ public class Main extends GraphicsPanel
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.add(new Main());
         frame.setLocationByPlatform(true);
-        
-        //JLabel lab1 = new JLabel("U", JLabel.LEFT);
-        //frame.setLayout(new FlowLayout()); 
-        //frame.add(lab1);
 
         JMenuBar menuBar = new JMenuBar();
 

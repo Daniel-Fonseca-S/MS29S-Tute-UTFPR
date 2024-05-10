@@ -62,8 +62,6 @@ public class AITester
                             if (knight != null && king != null)
                             {   
                                 game.declare(declarationSuit);
-                                
-                                continue;
                             }
                         }
                         
@@ -96,8 +94,6 @@ public class AITester
                             if (knight != null && king != null)
                             {   
                                 game.declare(declarationSuit);
-                                
-                                continue;
                             }
                         }
                         

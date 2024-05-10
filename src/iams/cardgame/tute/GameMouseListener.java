@@ -74,8 +74,7 @@ public class GameMouseListener implements MouseListener, MouseMotionListener
 
         if (this.hoverCard != null)
         {
-            if (this.hoverCard != null)
-                this.human.onMouseOver(this.hoverCard, false);
+            this.human.onMouseOver(this.hoverCard, false);
             
             this.hoverCard = null;
             
