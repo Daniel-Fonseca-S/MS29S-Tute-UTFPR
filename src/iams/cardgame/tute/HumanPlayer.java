@@ -1,16 +1,11 @@
 package iams.cardgame.tute;
 
-import java.awt.Color;
-import java.util.ArrayList;
-
 import iams.cardgame.tute.CardModel.Rank;
-import iams.cardgame.tute.movement.Movement;
-import iams.cardgame.tute.movement.PintaMovement;
-import iams.cardgame.tute.movement.ThrowMovement;
-import iams.cardgame.tute.movement.ThrowResponseMovement;
-import iams.cardgame.tute.movement.TuteMovement;
-import iams.cardgame.tute.movement.TwentyFortyMovement;
+import iams.cardgame.tute.movement.*;
 import iams.cardgame.tute.tr.Translator;
+
+import java.awt.*;
+import java.util.ArrayList;
 
 public class HumanPlayer {
     private final Translator tr;

@@ -6,11 +6,11 @@
     <property name="dir.buildfile" value="."/>
     <property name="dir.workspace" value="${dir.buildfile}/.."/>
     <property name="dir.jarfile" value="${dir.buildfile}/dist"/>
-	<property name="dir.jsmooth" value="C:/Program Files (x86)/JSmooth 0.9.9-7"/>
-	<taskdef name="jsmoothgen"
-		classname="net.charabia.jsmoothgen.ant.JSmoothGen"
-		classpath="${dir.jsmooth}/lib/jsmoothgen-ant.jar"/>
-	<target name="create_run_jar">
+    <property name="dir.jsmooth" value="C:/Program Files (x86)/JSmooth 0.9.9-7"/>
+    <taskdef name="jsmoothgen"
+             classname="net.charabia.jsmoothgen.ant.JSmoothGen"
+             classpath="${dir.jsmooth}/lib/jsmoothgen-ant.jar"/>
+    <target name="create_run_jar">
         <jar destfile="${dir.jarfile}/Tute.jar">
             <manifest>
                 <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
@@ -21,6 +21,6 @@
             <zipfileset src="jar-in-jar-loader.zip"/>
             <fileset dir="${dir.buildfile}/bin"/>
         </jar>
-		<jsmoothgen project="jar2exe.jsmooth" skeletonroot="${dir.jsmooth}/skeletons"/>
+        <jsmoothgen project="jar2exe.jsmooth" skeletonroot="${dir.jsmooth}/skeletons"/>
     </target>
 </project>
