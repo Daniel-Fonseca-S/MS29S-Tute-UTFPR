@@ -7,9 +7,9 @@ import iams.cardgame.tute.tr.Translator;
 
 public class PlayTurn {
     public TuteGameUI gameUI;
-    private TuteGame game;
-    private TuteController controller;
-    private Translator tr;
+    private final TuteGame game;
+    private final TuteController controller;
+    private final Translator tr;
 
     public PlayTurn(TuteGameUI gameUI, TuteGame game, TuteController controller, Translator tr) {
         this.gameUI = gameUI;
@@ -19,6 +19,7 @@ public class PlayTurn {
     }
 
     void startTurn() {
+
         if (this.game.canMakeDeclarations()) {
             Card cardChangeableByPinta = this.game.getPlayer2CardChangeableByPinta();
 
@@ -41,13 +42,11 @@ public class PlayTurn {
 
                 this.controller.add(new ReverseAnimator(previousPinta, false));
 
-                this.controller.add(new AnimationController.Animator() {
-                    @Override
-                    public boolean tick() {
-                        PlayTurn.this.startTurn();
+                this.controller.add(() -> {
 
-                        return true;
-                    }
+                    PlayTurn.this.startTurn();
+
+                    return true;
                 });
 
                 return;
@@ -56,19 +55,16 @@ public class PlayTurn {
 
         if (!this.game.isPlayer1Turn() && !this.game.getPlayer1Cards().isEmpty()) {
             if (this.game.canMakeDeclarations()) {
-                for (Rank rank : new Rank[]{Rank.King, Rank.Knight}) {
+                for (Rank rank : new Rank[]{Rank.KING, Rank.KNIGHT}) {
                     if (this.game.canDeclareTute(rank, this.game.getPlayer2Cards())) {
                         for (Card c : this.game.getPlayer2Cards()) {
                             if (c.rank == rank)
                                 this.controller.add(new ReverseAnimator(c, true));
                         }
 
-                        this.controller.add(new AnimationController.Animator() {
-                            @Override
-                            public boolean tick() {
-                                gameUI.tute(rank);
-                                return true;
-                            }
+                        this.controller.add(() -> {
+                            gameUI.tute(rank);
+                            return true;
                         });
 
                         return;
@@ -80,8 +76,8 @@ public class PlayTurn {
                             || this.game.getDeclaration(this.game.getPinta().suit) != null)
                         continue;
 
-                    Card knight = this.game.hasCard(Rank.Knight, declarationSuit, this.game.getPlayer2Cards());
-                    Card king = this.game.hasCard(Rank.King, declarationSuit, this.game.getPlayer2Cards());
+                    Card knight = this.game.hasCard(Rank.KNIGHT, declarationSuit, this.game.getPlayer2Cards());
+                    Card king = this.game.hasCard(Rank.KING, declarationSuit, this.game.getPlayer2Cards());
 
                     if (knight != null && king != null) {
                         this.game.declare(declarationSuit);
@@ -95,25 +91,19 @@ public class PlayTurn {
                                 this.tr.getTwentyFortyDeclarationString(this.game.getPinta().suit, declarationSuit),
                                 100));
 
-                        this.controller.add(new AnimationController.Animator() {
-                            @Override
-                            public boolean tick() {
-                                gameUI.fireWaitForUserClick(true);
+                        this.controller.add(() -> {
+                            gameUI.fireWaitForUserClick(true);
 
-                                return true;
-                            }
+                            return true;
                         });
 
                         this.controller.add(new ReverseAnimator(knight, false));
                         this.controller.add(new ReverseAnimator(king, false));
 
-                        this.controller.add(new AnimationController.Animator() {
-                            @Override
-                            public boolean tick() {
-                                PlayTurn.this.startTurn();
+                        this.controller.add(() -> {
+                            PlayTurn.this.startTurn();
 
-                                return true;
-                            }
+                            return true;
                         });
 
                         return;
@@ -132,13 +122,10 @@ public class PlayTurn {
             this.controller.add(this.controller.getCenterCardThrow(gameUI.player2playedCard));
         }
 
-        this.controller.add(new AnimationController.Animator() {
-            @Override
-            public boolean tick() {
-                gameUI.fireWaitForUserClick(true);
+        this.controller.add(() -> {
+            gameUI.fireWaitForUserClick(true);
 
-                return true;
-            }
+            return true;
         });
     }
 
@@ -150,13 +137,10 @@ public class PlayTurn {
         else
             this.controller.add(this.controller.getPlayer2WinDeckMovement(card1, card2));
 
-        this.controller.add(new AnimationController.Animator() {
-            @Override
-            public boolean tick() {
-                newTurn(player1Wins);
+        this.controller.add(() -> {
+            newTurn(player1Wins);
 
-                return true;
-            }
+            return true;
         });
     }
 
@@ -170,16 +154,13 @@ public class PlayTurn {
 
             this.controller.add(this.controller.relocatePlayer2Cards(this.game.getPlayer2Cards()));
 
-            this.controller.add(new AnimationController.Animator() {
-                @Override
-                public boolean tick() {
-                    PlayTurn.this.startTurn();
+            this.controller.add(() -> {
+                PlayTurn.this.startTurn();
 
-                    return true;
-                }
+                return true;
             });
 
-            gameUI.refreshCardsRemain(this.game.getDeck().size() + "");
+            gameUI.refreshRemainingCards(this.game.getDeck().size() + "");
         }
     }
 }

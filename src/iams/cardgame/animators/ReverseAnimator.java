@@ -3,8 +3,8 @@ package iams.cardgame.animators;
 import iams.cardgame.tute.Card;
 
 public class ReverseAnimator implements AnimationController.Animator {
-    final private boolean faceUp;
-    final private Card card;
+    private final boolean faceUp;
+    private final Card card;
 
     public ReverseAnimator(Card card, boolean faceUp) {
         this.card = card;

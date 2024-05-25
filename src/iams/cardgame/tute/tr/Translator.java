@@ -6,52 +6,48 @@ import iams.cardgame.tute.CardModel.Suit;
 
 import java.io.IOException;
 
-abstract public class Translator {
-    abstract public String getWindowTitle();
+public abstract class Translator {
+    public abstract String getWindowTitle();
 
-    abstract public String getPlayerGamesString(int player1Games, int player2Games);
+    public abstract String getPlayerGamesString(int player1Games, int player2Games);
 
-    abstract public String getPlayerPointsString(int playerPoints);
+    public abstract String getPlayerPointsString(int playerPoints);
 
-    abstract public String getRankName(Rank rank);
+    public abstract String getRankName(Rank rank);
 
-    abstract public String getSuitName(Suit suit);
+    public abstract String getSuitName(Suit suit);
 
-    abstract public String getCardNameString(CardModel currentCard);
+    public abstract String getCardNameString(CardModel currentCard);
 
-    abstract public String getPlus10DeMonteString();
+    public abstract String getPlus10DeMonteString();
 
-    abstract public String getChangePintaString();
+    public abstract String getChangePintaString();
 
-    abstract public String getTuteDeclarationString(Rank rank);
+    public abstract String getTuteDeclarationString(Rank rank);
 
-    abstract public String getPlusPointsString(int countValue);
+    public abstract String getPlusPointsString(int countValue);
 
-    abstract public String getPlusTwentyFortyPointsString(int countValue, Suit suit);
+    public abstract String getPlusTwentyFortyPointsString(int countValue, Suit suit);
 
-    abstract public String getTwentyFortyDeclarationString(Suit pintaSuit, Suit declarationSuit);
+    public abstract String getTwentyFortyDeclarationString(Suit pintaSuit, Suit declarationSuit);
 
-    abstract public String getDeclareRenuncioString();
+    public abstract String getDeclareRenuncioString();
 
-    abstract public String getMenuItemNames(String key);
+    public abstract String getMenuItemNames(String key);
 
-    abstract public String getCardsRemainText(String key);
+    public abstract String getCardsRemainText(String key);
 
-    abstract public String getCardsOverdueText(String key);
+    public abstract String getCardsOverdueText(String key);
 
-    abstract public String getRulesText() throws IOException;
+    public abstract String getRulesText() throws IOException;
 
     public static Translator get(String defaultLanguage) {
-        switch (defaultLanguage) {
-            case "PT":
-                return new TranslatorPtBr();
-            case "EN":
-                return new TranslatorEn();
-            case "SP":
-                return new TranslatorEs();
-            default:
-                throw new AssertionError();
-        }
+        return switch (defaultLanguage) {
+            case "PT" -> new TranslatorPtBr();
+            case "EN" -> new TranslatorEn();
+            case "SP" -> new TranslatorEs();
+            default -> throw new AssertionError();
+        };
     }
 
 

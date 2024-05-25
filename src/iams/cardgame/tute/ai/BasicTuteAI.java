@@ -18,7 +18,7 @@ public class BasicTuteAI implements TuteAI {
     }
 
     static void getMinimumPintValue(Collection<Card> myCards, ArrayList<Card> candidateCardsToThrow, TuteGamePlayerContext context) {
-        int minimumValue = Rank.Ace.countValue;
+        int minimumValue = Rank.ACE.countValue;
 
         for (Card c : myCards) {
             if (c.suit != context.getPintaSuit()) {
@@ -58,7 +58,7 @@ public class BasicTuteAI implements TuteAI {
             if (c.suit != context.getPintaSuit() &&
                     c.suit == thrownCard.suit &&
                     c.rank.countValue > thrownCard.rank.countValue &&
-                    (c.rank == Rank.Ace || c.rank == Rank.V3)) {
+                    (c.rank == Rank.ACE || c.rank == Rank.V3)) {
                 candidateCardsToThrow.add(c);
             }
         }

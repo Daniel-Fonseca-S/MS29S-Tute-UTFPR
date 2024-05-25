@@ -4,7 +4,8 @@ import iams.cardgame.tute.CardModel.Suit;
 import iams.cardgame.tute.tr.Translator;
 
 public class TwentyFortyMovement implements Movement {
-    final private Suit pintaSuit, suit;
+    private final Suit pintaSuit;
+    private final Suit suit;
 
     public TwentyFortyMovement(Suit pintaSuit, Suit suit) {
         this.pintaSuit = pintaSuit;

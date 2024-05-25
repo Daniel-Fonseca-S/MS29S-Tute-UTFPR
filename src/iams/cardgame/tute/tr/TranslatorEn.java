@@ -26,34 +26,24 @@ public class TranslatorEn extends Translator {
 
     @Override
     public String getSuitName(Suit suit) {
-        switch (suit) {
-            case Batons:
-                return "Batons";
-            case Cups:
-                return "Cups";
-            case Swords:
-                return "Swords";
-            case Coins:
-                return "Coins";
-            default:
-                throw new AssertionError();
-        }
+        return switch (suit) {
+            case BATONS -> "Batons";
+            case CUPS -> "Cups";
+            case SWORDS -> "Swords";
+            case COINS -> "Coins";
+            default -> throw new AssertionError();
+        };
     }
 
     @Override
     public String getRankName(Rank rank) {
-        switch (rank) {
-            case Ace:
-                return "Ace";
-            case King:
-                return "King";
-            case Knight:
-                return "Knight";
-            case Knave:
-                return "Knave";
-            default:
-                return rank.name().replaceAll("^V", "");
-        }
+        return switch (rank) {
+            case ACE -> "Ace";
+            case KING -> "King";
+            case KNIGHT -> "Knight";
+            case KNAVE -> "Knave";
+            default -> rank.name().replaceAll("^V", "");
+        };
     }
 
     @Override
@@ -73,7 +63,7 @@ public class TranslatorEn extends Translator {
 
     @Override
     public String getTuteDeclarationString(Rank rank) {
-        return "Tute (" + (rank == Rank.King ? "Kings" : "Knights") + ")";
+        return "Tute (" + (rank == Rank.KING ? "Kings" : "Knights") + ")";
     }
 
     @Override
@@ -101,36 +91,22 @@ public class TranslatorEn extends Translator {
 
     @Override
     public String getMenuItemNames(String key) {
-        switch (key) {
-            case "OPTIONS":
-                return "Options";
-            case "RESTART":
-                return "Restart";
-            case "QUIT":
-                return "Quit game";
-            case "GAME":
-                return "Game";
-            case "RULES":
-                return "Rules";
-            case "LANGUAGES":
-                return "Languages";
-            case "PORTUGUESE":
-                return "Portuguese (BR)";
-            case "ENGLISH":
-                return "English";
-            case "SPANISH":
-                return "Spanish";
-            case "COLORBACKGROUND":
-                return "Background Color";
-            case "GREEN":
-                return "Green";
-            case "RED":
-                return "Red";
-            case "BLUE":
-                return "Blue";
-            default:
-                throw new AssertionError();
-        }
+        return switch (key) {
+            case "OPTIONS" -> "Options";
+            case "RESTART" -> "Restart";
+            case "QUIT" -> "Quit game";
+            case "GAME" -> "Game";
+            case "RULES" -> "Rules";
+            case "LANGUAGES" -> "Languages";
+            case "PORTUGUESE" -> "Portuguese (BR)";
+            case "ENGLISH" -> "English";
+            case "SPANISH" -> "Spanish";
+            case "COLORBACKGROUND" -> "Background Color";
+            case "GREEN" -> "Green";
+            case "RED" -> "Red";
+            case "BLUE" -> "Blue";
+            default -> throw new AssertionError();
+        };
     }
 
     @Override
@@ -141,7 +117,7 @@ public class TranslatorEn extends Translator {
             ex.printStackTrace();
         }
 
-        return new String();
+        return "";
     }
 
     @Override

@@ -8,26 +8,20 @@ import java.awt.image.ImageObserver;
 import java.util.Comparator;
 
 public class Card extends CardModel {
-    public static final Comparator<Card> PAINT_COMPARATOR = new Comparator<Card>() {
-        @Override
-        public int compare(Card o1, Card o2) {
-            return -Integer.compare(o1.zValue, o2.zValue);
-        }
-    };
+    public static final Comparator<Card> PAINT_COMPARATOR = (o1, o2) -> -Integer.compare(o1.zValue, o2.zValue);
 
-    static private int MIN_Z_VALUE = 0;
-    static private int MAX_Z_VALUE = 0;
+    private static int minZValue = 0;
+    private static int maxZValue = 0;
 
     public boolean faceUp = false;
-    private double x, y, rotation;
-    private AffineTransform at, iat;
+    private double x;
+    private double y;
+    private double rotation;
+    private AffineTransform at;
+    private AffineTransform iat;
     private Color highlightColor;
     private boolean highlightingEnabled;
-    private int zValue = MAX_Z_VALUE++;
-
-    Card(CardModel card) {
-        super(card.suit, card.rank, card.image);
-    }
+    private int zValue = maxZValue++;
 
     Card(CardModel card, double x, double y, double rotation) {
         super(card.suit, card.rank, card.image);
@@ -40,7 +34,9 @@ public class Card extends CardModel {
 
         boolean movementCompleted = true;
 
-        double newX = 0, newY = 0, newRotation = 0;
+        double newX = 0;
+        double newY = 0;
+        double newRotation = 0;
 
         if (d < moveSpeed) {
             newX = x;
@@ -80,7 +76,7 @@ public class Card extends CardModel {
         this.at = new AffineTransform();
         this.at.translate(this.x, this.y);
         this.at.rotate(Math.PI * this.rotation / 180);
-        this.at.translate(-CardModel.WIDTH / 2, -CardModel.HEIGHT / 2);
+        this.at.translate((double) -CardModel.WIDTH / 2, (double) -CardModel.HEIGHT / 2);
 
         try {
             this.iat = this.at.createInverse();
@@ -90,11 +86,11 @@ public class Card extends CardModel {
     }
 
     public void moveToFront() {
-        this.zValue = MIN_Z_VALUE--;
+        this.zValue = minZValue--;
     }
 
     public void moveToBack() {
-        this.zValue = MAX_Z_VALUE++;
+        this.zValue = maxZValue++;
     }
 
     public void draw(Graphics2D g, ImageObserver observer) {
@@ -112,8 +108,8 @@ public class Card extends CardModel {
 
             g.drawRect(-1 - HIGHLIGHT_BORDER / 2,
                     -1 - HIGHLIGHT_BORDER / 2,
-                    Card.WIDTH + 2 + HIGHLIGHT_BORDER,
-                    Card.HEIGHT + 2 + HIGHLIGHT_BORDER);
+                    CardModel.WIDTH + 2 + HIGHLIGHT_BORDER,
+                    CardModel.HEIGHT + 2 + HIGHLIGHT_BORDER);
         }
 
 
@@ -123,8 +119,8 @@ public class Card extends CardModel {
     public boolean containsPoint(Point2D p) {
         p = this.iat.transform(p, null);
 
-        return p.getX() > 0 && p.getX() < Card.WIDTH &&
-                p.getY() > 0 && p.getY() < Card.HEIGHT;
+        return p.getX() > 0 && p.getX() < CardModel.WIDTH &&
+                p.getY() > 0 && p.getY() < CardModel.HEIGHT;
     }
 
     public void setHighlightColor(Color color) {

@@ -3,16 +3,17 @@ package iams.cardgame.tute;
 import iams.cardgame.tute.tr.Translator;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 
 import static javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER;
 
 public class RulesController {
 
-    public static void ShowRules(Translator tr, ImageIcon appIcon) throws IOException {
+    public static void showRules(Translator tr, ImageIcon appIcon) throws IOException {
         JFrame rulesFrame = new JFrame(tr.getWindowTitle());
-        rulesFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        rulesFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        rulesFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        rulesFrame.setExtendedState(Frame.MAXIMIZED_BOTH);
 
         JTextArea textArea = new JTextArea(40, 100);
         textArea.setText(tr.getRulesText());

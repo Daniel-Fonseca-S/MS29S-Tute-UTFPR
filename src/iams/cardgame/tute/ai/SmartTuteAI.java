@@ -19,7 +19,7 @@ public class SmartTuteAI implements TuteAI {
         for (Card c : myCards) {
             if (c.suit != context.getPintaSuit() &&
                     c.suit == thrownCard.suit &&
-                    (c.rank == Rank.Ace || c.rank == Rank.V3)) {
+                    (c.rank == Rank.ACE || c.rank == Rank.V3)) {
                 candidateCardsToThrow.add(c);
             }
         }

@@ -7,42 +7,30 @@ import java.io.PrintStream;
 import java.util.*;
 
 public class TuteGame {
-    static final public int NUM_CARDS_PER_PLAYER = 8;
+    public static final int NUM_CARDS_PER_PLAYER = 8;
 
-    final private Comparator<Card> cardValueComparator = new Comparator<Card>() {
-        @Override
-        public int compare(Card o1, Card o2) {
-            int n = Integer.compare(
-                    TuteGame.this.pinta != null && o1.suit == TuteGame.this.pinta.suit ? 10 : o1.suit.ordinal(),
-                    TuteGame.this.pinta != null && o2.suit == TuteGame.this.pinta.suit ? 10 : o2.suit.ordinal());
-
-            if (n != 0)
-                return n;
-
-            return Integer.compare(o1.rank.relativeValue, o2.rank.relativeValue);
-        }
-    };
+    private final Comparator<Card> cardValueComparator = Comparator.comparingInt((Card o) -> TuteGame.this.pinta != null && o.suit == TuteGame.this.pinta.suit ? 10 : o.suit.ordinal()).thenComparingInt(o -> o.rank.relativeValue);
 
     enum Declaration {
-        Player1,
-        Player2;
+        PLAYER_1,
+        PLAYER_2;
     }
 
-    final private TreeMap<Suit, Declaration> declarations = new TreeMap<>();
+    private final TreeMap<Suit, Declaration> declarations = new TreeMap<>();
 
-    final private ArrayList<Card> cardRasters = new ArrayList<>();
-    final private ArrayList<Card> deck = new ArrayList<>();
-    final private TreeSet<Card> player1Cards = new TreeSet<>(this.cardValueComparator);
-    final private TreeSet<Card> player2Cards = new TreeSet<>(this.cardValueComparator);
-    final private ArrayList<Card> player1Baza = new ArrayList<>();
-    final private ArrayList<Card> player2Baza = new ArrayList<>();
+    private final ArrayList<Card> cardRasters = new ArrayList<>();
+    private final ArrayList<Card> deck = new ArrayList<>();
+    private final TreeSet<Card> player1Cards = new TreeSet<>(this.cardValueComparator);
+    private final TreeSet<Card> player2Cards = new TreeSet<>(this.cardValueComparator);
+    private final ArrayList<Card> player1Baza = new ArrayList<>();
+    private final ArrayList<Card> player2Baza = new ArrayList<>();
 
-    final private Collection<Card> unmodifiableCardRasters = Collections.unmodifiableList(this.cardRasters);
-    final private Collection<Card> unmodifiableDeck = Collections.unmodifiableList(this.deck);
-    final private Collection<Card> unmodifiablePlayer1Cards = Collections.unmodifiableSet(this.player1Cards);
-    final private Collection<Card> unmodifiablePlayer2Cards = Collections.unmodifiableSet(this.player2Cards);
-    final private Collection<Card> unmodifiablePlayer1Baza = Collections.unmodifiableList(this.player1Baza);
-    final private Collection<Card> unmodifiablePlayer2Baza = Collections.unmodifiableList(this.player2Baza);
+    private final Collection<Card> unmodifiableCardRasters = Collections.unmodifiableList(this.cardRasters);
+    private final Collection<Card> unmodifiableDeck = Collections.unmodifiableList(this.deck);
+    private final Collection<Card> unmodifiablePlayer1Cards = Collections.unmodifiableSet(this.player1Cards);
+    private final Collection<Card> unmodifiablePlayer2Cards = Collections.unmodifiableSet(this.player2Cards);
+    private final Collection<Card> unmodifiablePlayer1Baza = Collections.unmodifiableList(this.player1Baza);
+    private final Collection<Card> unmodifiablePlayer2Baza = Collections.unmodifiableList(this.player2Baza);
 
     private Card pinta = null;
 
@@ -51,8 +39,6 @@ public class TuteGame {
     private int player2Games = 0;
     private boolean player1Turn = false;
     private boolean player1Mano = true;
-
-    private PrintStream out = null;
 
     public Collection<Card> getCardRasters() {
         return this.unmodifiableCardRasters;
@@ -126,11 +112,11 @@ public class TuteGame {
                     if (card.rank == CardModel.Rank.V7 &&
                             (this.pinta.rank == CardModel.Rank.V8 ||
                                     this.pinta.rank == CardModel.Rank.V9 ||
-                                    this.pinta.rank == CardModel.Rank.Knave ||
-                                    this.pinta.rank == CardModel.Rank.Knight ||
-                                    this.pinta.rank == CardModel.Rank.King ||
+                                    this.pinta.rank == CardModel.Rank.KNAVE ||
+                                    this.pinta.rank == CardModel.Rank.KNIGHT ||
+                                    this.pinta.rank == CardModel.Rank.KING ||
                                     this.pinta.rank == CardModel.Rank.V3 ||
-                                    this.pinta.rank == CardModel.Rank.Ace)) {
+                                    this.pinta.rank == CardModel.Rank.ACE)) {
                         return card;
                     }
 
@@ -170,10 +156,10 @@ public class TuteGame {
     }
 
     public TuteGame() {
-        ArrayList<CardModel> cardModels = CardModel.createDeck(true);
+        ArrayList<CardModel> cardModels = CardModel.createDeck();
 
         for (CardModel cardModel : cardModels) {
-            Card card = new Card(cardModel, Main.BOARD_WIDTH / 2, Main.BOARD_HEIGHT / 2, 0);
+            Card card = new Card(cardModel, (double) Main.BOARD_WIDTH / 2, (double) Main.BOARD_HEIGHT / 2, 0);
 
             this.cardRasters.add(card);
 
@@ -196,16 +182,9 @@ public class TuteGame {
 
         this.pinta.moveToBack();
 
-        if (this.out != null)
-            this.out.println("SHUFFLE PINTA " + this.pinta); //$NON-NLS-1$
-
-        if (this.out != null)
-            this.out.println("TURN " + (this.player1Turn ? 1 : 2)); //$NON-NLS-1$
     }
 
     private Card changePintaPlayer(Card cardChangeableByPinta, TreeSet<Card> playerCards) {
-        if (this.out != null)
-            this.out.println("PLAYER " + (playerCards == this.player1Cards ? "1" : "2") + " CHANGES PINTA " + this.pinta + " " + cardChangeableByPinta); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$
 
         if (!playerCards.remove(cardChangeableByPinta))
             throw new AssertionError();
@@ -240,9 +219,6 @@ public class TuteGame {
         if (c1 == null)
             throw new AssertionError();
 
-        if (this.out != null)
-            this.out.println("DISPATCH " + (playerCards == this.player1Cards ? "1" : "2") + " " + c1); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
-
         playerCards.add(c1);
 
         return c1;
@@ -259,16 +235,16 @@ public class TuteGame {
     public void declare(Suit suit) {
         if (this.canMakeDeclarations()) {
             if (this.player1Turn &&
-                    this.hasCard(Rank.King, suit, this.player1Cards) != null &&
-                    this.hasCard(Rank.Knight, suit, this.player1Cards) != null) {
-                this.declarations.put(suit, Declaration.Player1);
+                    this.hasCard(Rank.KING, suit, this.player1Cards) != null &&
+                    this.hasCard(Rank.KNIGHT, suit, this.player1Cards) != null) {
+                this.declarations.put(suit, Declaration.PLAYER_1);
                 return;
             }
 
             if (!this.player1Turn &&
-                    this.hasCard(Rank.King, suit, this.player2Cards) != null &&
-                    this.hasCard(Rank.Knight, suit, this.player2Cards) != null) {
-                this.declarations.put(suit, Declaration.Player2);
+                    this.hasCard(Rank.KING, suit, this.player2Cards) != null &&
+                    this.hasCard(Rank.KNIGHT, suit, this.player2Cards) != null) {
+                this.declarations.put(suit, Declaration.PLAYER_2);
                 return;
             }
         }
@@ -318,8 +294,6 @@ public class TuteGame {
     }
 
     public boolean playCards(Card firstCard, Card secondCard) {
-        if (this.out != null)
-            this.out.println("THROW " + firstCard + " " + secondCard); //$NON-NLS-1$ //$NON-NLS-2$
 
         boolean firstCardWins = this.calculateIfFirstCardWins(firstCard, secondCard);
 
@@ -359,15 +333,13 @@ public class TuteGame {
 
         this.player1Turn = player1Wins;
 
-        if (this.out != null)
-            this.out.println("TURN " + (this.player1Turn ? 1 : 2)); //$NON-NLS-1$
-
         return player1Wins;
     }
 
     public void countPointsAndRestart(boolean player1WinnedLastTrick) {
         if (!this.skipCardCount) {
-            int player1Points = 0, player2Points = 0;
+            int player1Points = 0;
+            int player2Points = 0;
 
             for (Card card : this.getPlayer1Baza())
                 player1Points += card.rank.countValue;
@@ -383,10 +355,10 @@ public class TuteGame {
             for (Map.Entry<Suit, Declaration> entry : this.declarations.entrySet()) {
                 int points = entry.getKey() == this.pinta.suit ? 40 : 20;
 
-                if (entry.getValue() == Declaration.Player1)
+                if (entry.getValue() == Declaration.PLAYER_1)
                     player1Points += points;
 
-                if (entry.getValue() == Declaration.Player2)
+                if (entry.getValue() == Declaration.PLAYER_2)
                     player2Points += points;
             }
 
@@ -396,12 +368,7 @@ public class TuteGame {
             else if (player1Points < player2Points)
                 this.player2Games++;
 
-            if (this.out != null)
-                this.out.println("POINTS " + player1Points + " " + player2Points); //$NON-NLS-1$ //$NON-NLS-2$
         }
-
-        if (this.out != null)
-            this.out.println("GAMES " + this.player1Games + " " + this.player2Games); //$NON-NLS-1$ //$NON-NLS-2$
 
         this.skipCardCount = false;
 
@@ -437,7 +404,7 @@ public class TuteGame {
                 this.player1Games += 2;
             else
                 this.player2Games += 2;
-        } else // if (!player1Turn)
+        } else
         {
             if (renuncio)
                 this.player2Games += 2;
@@ -450,13 +417,13 @@ public class TuteGame {
 
     public void declareTute() {
         if (this.player1Turn &&
-                (this.canDeclareTute(Rank.Knight, this.player1Cards) ||
-                        this.canDeclareTute(Rank.King, this.player1Cards))) {
+                (this.canDeclareTute(Rank.KNIGHT, this.player1Cards) ||
+                        this.canDeclareTute(Rank.KING, this.player1Cards))) {
             this.player1Games++;
             this.skipCardCount = true;
         } else if (!this.player1Turn &&
-                (this.canDeclareTute(Rank.Knight, this.player2Cards) ||
-                        this.canDeclareTute(Rank.King, this.player2Cards))) {
+                (this.canDeclareTute(Rank.KNIGHT, this.player2Cards) ||
+                        this.canDeclareTute(Rank.KING, this.player2Cards))) {
             this.player2Games++;
             this.skipCardCount = true;
         } else {

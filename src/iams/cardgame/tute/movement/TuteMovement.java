@@ -3,16 +3,7 @@ package iams.cardgame.tute.movement;
 import iams.cardgame.tute.CardModel.Rank;
 import iams.cardgame.tute.tr.Translator;
 
-public class TuteMovement implements Movement {
-    final private Rank rank;
-
-    public TuteMovement(Rank rank) {
-        this.rank = rank;
-    }
-
-    public Rank getRank() {
-        return this.rank;
-    }
+public record TuteMovement(Rank rank) implements Movement {
 
     @Override
     public String toString(Translator tr) {

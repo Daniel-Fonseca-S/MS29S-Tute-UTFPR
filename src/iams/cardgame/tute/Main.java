@@ -18,21 +18,23 @@ import java.util.Arrays;
 public class Main extends GraphicsPanel {
     Languages lg = new Languages();
 
-    final public Translator tr = Translator.get(lg.getDefaultLanguage());
+    public final Translator tr = Translator.get(lg.getDefaultLanguage());
 
-    private static final Font FONT = new Font("Times New Roman", Font.BOLD, 28); //$NON-NLS-1$
+    public static final String TIMES_NEW_ROMAN = "Times New Roman";
+    private static final Font FONT = new Font(TIMES_NEW_ROMAN, Font.BOLD, 28); //$NON-NLS-1$
 
-    private static final Font SMALL_FONT = new Font("Times New Roman", Font.BOLD, 22); //$NON-NLS-1$
+    private static final Font SMALL_FONT = new Font(TIMES_NEW_ROMAN, Font.BOLD, 22); //$NON-NLS-1$
 
-    private static Color BACKGROUND_COLOR = new Color(13, 98, 69);
+    private static Color color = new Color(13, 98, 69);
 
-    public static final int BOARD_WIDTH = 700, BOARD_HEIGHT = 700;
+    public static final int BOARD_WIDTH = 700;
+    public static final int BOARD_HEIGHT = 700;
 
     private final TuteController controller = new TuteController(this);
 
-    final public TuteGame game = new TuteGame();
+    public final TuteGame game = new TuteGame();
 
-    final private HumanPlayer humanPlayer = new HumanPlayer(this.game, this.tr);
+    private final HumanPlayer humanPlayer = new HumanPlayer(this.game, this.tr);
 
     private final TuteGameUI gameUI = new TuteGameUI(this.tr, this.game, this.controller, this.humanPlayer);
 
@@ -63,7 +65,7 @@ public class Main extends GraphicsPanel {
         g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
         g2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
 
-        g2.setColor(BACKGROUND_COLOR);
+        g2.setColor(color);
         g2.fillRect(0, 0, this.getWidth(), this.getHeight());
 
         g2.setFont(FONT);
@@ -85,18 +87,18 @@ public class Main extends GraphicsPanel {
 
         g2.setColor(Color.white);
 
-        String cardsRemain = this.gameUI.refreshCardsRemain(String.valueOf(this.game.getDeck().size()));
+        String cardsRemain = this.gameUI.refreshRemainingCards(String.valueOf(this.game.getDeck().size()));
         g2.drawString(cardsRemain, -fm.stringWidth(cardsRemain), 330 + fm.getMaxAscent());
 
         String notification = this.gameUI.getNotification();
 
         if (notification != null && !notification.isEmpty()) {
-            g2.drawString(notification, BOARD_WIDTH / 2 + Card.HEIGHT, BOARD_HEIGHT / 2 + fm.getMaxAscent() / 2);
+            g2.drawString(notification, BOARD_WIDTH / 2 + CardModel.HEIGHT, BOARD_HEIGHT / 2 + fm.getMaxAscent() / 2);
         }
 
         FontMetrics fmPointsTurn = g2.getFontMetrics();
 
-        g2.setFont(new Font("Times New Roman", Font.BOLD, 14));
+        g2.setFont(new Font(TIMES_NEW_ROMAN, Font.BOLD, 14));
         g2.setColor(Color.white);
 
         String pointsTurnPlayer1 = this.tr.getCardsOverdueText(String.valueOf(this.game.getPlayer1Baza().size() / 2));
@@ -132,7 +134,7 @@ public class Main extends GraphicsPanel {
             card.draw(g2, this);
     }
 
-    static public void restartGame(JFrame frame) {
+    public static void restartGame(JFrame frame) {
         frame.dispose();
         try {
             main(null);
@@ -141,7 +143,7 @@ public class Main extends GraphicsPanel {
         }
     }
 
-    static public void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
         final Languages lg = new Languages();
         final Translator tr = Translator.get(lg.getDefaultLanguage());
 
@@ -152,8 +154,8 @@ public class Main extends GraphicsPanel {
         ImageIcon appIcon = new ImageIcon(pathIcon.toString());
 
         JFrame frame = new JFrame(tr.getWindowTitle());
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setExtendedState(Frame.MAXIMIZED_BOTH);
         frame.add(new Main());
         frame.setLocationByPlatform(true);
 
@@ -192,23 +194,23 @@ public class Main extends GraphicsPanel {
         colorBackground.add(backgroundBlue);
 
         backgroundGreen.addActionListener(e -> {
-            BACKGROUND_COLOR = new Color(13, 98, 69);
+            color = new Color(13, 98, 69);
             frame.paint(frame.getGraphics());
         });
 
         backgroundRed.addActionListener(e -> {
-            BACKGROUND_COLOR = new Color(92, 0, 27);
+            color = new Color(92, 0, 27);
             frame.paint(frame.getGraphics());
         });
 
         backgroundBlue.addActionListener(e -> {
-            BACKGROUND_COLOR = new Color(0, 53, 95);
+            color = new Color(0, 53, 95);
             frame.paint(frame.getGraphics());
         });
 
         rules.addActionListener(e -> {
             try {
-                RulesController.ShowRules(tr, appIcon);
+                RulesController.showRules(tr, appIcon);
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
@@ -234,7 +236,7 @@ public class Main extends GraphicsPanel {
         });
 
         try {
-            RulesController.ShowRules(tr, appIcon);
+            RulesController.showRules(tr, appIcon);
         } catch (IOException e1) {
             e1.printStackTrace();
         }

@@ -5,17 +5,15 @@ import iams.cardgame.tute.Card;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class ThrowCardAnimator implements AnimationController.Animator {
-    final private Random r = ThreadLocalRandom.current();
-
-    final public Card card;
-    final public double x, y, rotation;
+public record ThrowCardAnimator(Card card, double x, double y,
+                                double rotation) implements AnimationController.Animator {
 
     public ThrowCardAnimator(Card card, double x, double y, double rotation) {
         this.card = card;
-        this.x = x - 30 + 60 * this.r.nextDouble();
-        this.y = y - 30 + 60 * this.r.nextDouble();
-        this.rotation = rotation - 0.5 + 1.0 * this.r.nextDouble();
+        Random r = ThreadLocalRandom.current();
+        this.x = x - 30 + 60 * r.nextDouble();
+        this.y = y - 30 + 60 * r.nextDouble();
+        this.rotation = rotation - 0.5 + r.nextDouble();
     }
 
     @Override

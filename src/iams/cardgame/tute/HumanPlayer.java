@@ -91,13 +91,13 @@ public class HumanPlayer {
     }
 
     private Movement handleDeclaration() {
-        if ((this.hoverCard.rank == Rank.King || this.hoverCard.rank == Rank.Knight) && this.game.canDeclareTute(this.hoverCard.rank, this.game.getPlayer1Cards())) {
+        if ((this.hoverCard.rank == Rank.KING || this.hoverCard.rank == Rank.KNIGHT) && this.game.canDeclareTute(this.hoverCard.rank, this.game.getPlayer1Cards())) {
             highlightCardsOfSameRank();
             return new TuteMovement(this.hoverCard.rank);
         }
 
-        if (this.hoverCard.rank == Rank.King && this.game.getDeclaration(this.game.getPinta().suit) == null && this.game.getDeclaration(this.hoverCard.suit) == null) {
-            Card knight = this.game.hasCard(Rank.Knight, this.hoverCard.suit, this.game.getPlayer1Cards());
+        if (this.hoverCard.rank == Rank.KING && this.game.getDeclaration(this.game.getPinta().suit) == null && this.game.getDeclaration(this.hoverCard.suit) == null) {
+            Card knight = this.game.hasCard(Rank.KNIGHT, this.hoverCard.suit, this.game.getPlayer1Cards());
             if (knight != null) {
                 highlightCardsForTwentyForty(knight);
                 return new TwentyFortyMovement(this.game.getPinta().suit, this.hoverCard.suit);

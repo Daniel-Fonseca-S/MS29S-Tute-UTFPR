@@ -1,14 +1,13 @@
 package iams.cardgame.tute;
 
 import iams.cardgame.tute.CardModel.Suit;
-import iams.cardgame.tute.TuteGame.Declaration;
 
 import java.util.Collection;
-import java.util.TreeSet;
+import java.util.SortedSet;
 
 public class TuteGamePlayerContext {
-    final private TuteGame game;
-    final private boolean player1;
+    private final TuteGame game;
+    private final boolean player1;
 
     public TuteGamePlayerContext(TuteGame game, boolean player1) {
         this.game = game;
@@ -19,7 +18,7 @@ public class TuteGamePlayerContext {
         return this.player1 ? this.game.getPlayer1Cards() : this.game.getPlayer2Cards();
     }
 
-    public TreeSet<Card> calculateAllowedCardsToAvoidRenuncio(Card firstCard) {
+    public SortedSet<Card> calculateAllowedCardsToAvoidRenuncio(Card firstCard) {
         return this.game.calculateAllowedCardsToAvoidRenuncio(firstCard, this.getMyCards());
     }
 
@@ -31,7 +30,4 @@ public class TuteGamePlayerContext {
         return this.game.isDeckEmpty();
     }
 
-    public Declaration getDeclarations(Suit suit) {
-        return this.game.getDeclaration(suit);
-    }
 }

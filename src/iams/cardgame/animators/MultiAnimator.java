@@ -5,7 +5,7 @@ import iams.cardgame.animators.AnimationController.Animator;
 import java.util.ArrayList;
 
 public class MultiAnimator implements AnimationController.Animator {
-    final private ArrayList<Animator> animators = new ArrayList<Animator>();
+    private final ArrayList<Animator> animators = new ArrayList<>();
 
     public void add(Animator animator) {
         this.animators.add(animator);
@@ -14,11 +14,7 @@ public class MultiAnimator implements AnimationController.Animator {
     @Override
     public boolean tick() {
         if (!this.animators.isEmpty()) {
-            for (Animator animator : new ArrayList<Animator>(this.animators)) {
-                if (animator.tick()) {
-                    this.animators.remove(animator);
-                }
-            }
+            this.animators.removeIf(Animator::tick);
         }
 
         return this.animators.isEmpty();

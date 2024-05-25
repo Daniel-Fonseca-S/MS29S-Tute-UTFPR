@@ -9,7 +9,6 @@ import iams.cardgame.tute.ai.TuteAI;
 import iams.cardgame.tute.movement.*;
 import iams.cardgame.tute.tr.Translator;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -29,11 +28,9 @@ public class TuteGameUI {
     public int player1Points = -1;
     public int player2Points = -1;
 
-    public JFrame Frame = null;
+    public Boolean refreshCardsRemain = false;
 
-    public Boolean RefreshCardsRemain = false;
-
-    private PlayTurn playTurn;
+    private final PlayTurn playTurn;
 
     public class MessageAnimator implements AnimationController.Animator {
         private final String message;
@@ -98,7 +95,7 @@ public class TuteGameUI {
         for (int i = 0; i < TuteGame.NUM_CARDS_PER_PLAYER; i++)
             this.dealNewCards();
 
-        refreshCardsRemain(this.game.getDeck().size() + "");
+        refreshRemainingCards(this.game.getDeck().size() + "");
 
         this.controller.add(new ReverseAnimator(this.game.getPinta(), true));
 
@@ -110,13 +107,10 @@ public class TuteGameUI {
 
         this.controller.add(new WaitAnimator(50));
 
-        this.controller.add(new AnimationController.Animator() {
-            @Override
-            public boolean tick() {
-                playTurn.startTurn();
+        this.controller.add(() -> {
+            playTurn.startTurn();
 
-                return true;
-            }
+            return true;
         });
     }
 
@@ -173,13 +167,10 @@ public class TuteGameUI {
 
         this.human.clearSelection();
 
-        this.controller.add(new AnimationController.Animator() {
-            @Override
-            public boolean tick() {
-                TuteGameUI.this.game.countPointsAndRestart(TuteGameUI.this.game.isPlayer1Turn());
-                TuteGameUI.this.initialize();
-                return true;
-            }
+        this.controller.add(() -> {
+            TuteGameUI.this.game.countPointsAndRestart(TuteGameUI.this.game.isPlayer1Turn());
+            TuteGameUI.this.initialize();
+            return true;
         });
     }
 
@@ -203,13 +194,10 @@ public class TuteGameUI {
             this.controller.add(new ReverseAnimator(card, true));
 
             if (card.rank.countValue > 0) {
-                this.controller.add(new AnimationController.Animator() {
-                    @Override
-                    public boolean tick() {
-                        TuteGameUI.this.player1Points += card.rank.countValue;
+                this.controller.add(() -> {
+                    TuteGameUI.this.player1Points += card.rank.countValue;
 
-                        return true;
-                    }
+                    return true;
                 });
 
                 this.controller.add(new MessageAnimator(this.tr.getPlusPointsString(card.rank.countValue), 30));
@@ -219,12 +207,9 @@ public class TuteGameUI {
         if (player1WonLastTrick) {
             this.controller.add(new WaitAnimator(15));
 
-            this.controller.add(new AnimationController.Animator() {
-                @Override
-                public boolean tick() {
-                    TuteGameUI.this.player1Points += 10;
-                    return true;
-                }
+            this.controller.add(() -> {
+                TuteGameUI.this.player1Points += 10;
+                return true;
             });
 
             this.controller.add(new MessageAnimator(this.tr.getPlus10DeMonteString(), 30));
@@ -233,17 +218,14 @@ public class TuteGameUI {
         for (Suit suit : Suit.values()) {
             Declaration declaration = this.game.getDeclaration(suit);
 
-            if (declaration == Declaration.Player1) {
+            if (declaration == Declaration.PLAYER_1) {
                 this.controller.add(new WaitAnimator(15));
 
                 int points = suit == TuteGameUI.this.game.getPinta().suit ? 40 : 20;
 
-                this.controller.add(new AnimationController.Animator() {
-                    @Override
-                    public boolean tick() {
-                        TuteGameUI.this.player1Points += points;
-                        return true;
-                    }
+                this.controller.add(() -> {
+                    TuteGameUI.this.player1Points += points;
+                    return true;
                 });
 
                 this.controller.add(new MessageAnimator(this.tr.getPlusTwentyFortyPointsString(points, suit), 30));
@@ -260,13 +242,10 @@ public class TuteGameUI {
             this.controller.add(new ReverseAnimator(card, true));
 
             if (card.rank.countValue > 0) {
-                this.controller.add(new AnimationController.Animator() {
-                    @Override
-                    public boolean tick() {
-                        TuteGameUI.this.player2Points += card.rank.countValue;
+                this.controller.add(() -> {
+                    TuteGameUI.this.player2Points += card.rank.countValue;
 
-                        return true;
-                    }
+                    return true;
                 });
 
                 this.controller.add(new MessageAnimator(this.tr.getPlusPointsString(card.rank.countValue), 30));
@@ -276,12 +255,9 @@ public class TuteGameUI {
         if (!player1WonLastTrick) {
             this.controller.add(new WaitAnimator(15));
 
-            this.controller.add(new AnimationController.Animator() {
-                @Override
-                public boolean tick() {
-                    TuteGameUI.this.player2Points += 10;
-                    return true;
-                }
+            this.controller.add(() -> {
+                TuteGameUI.this.player2Points += 10;
+                return true;
             });
 
             this.controller.add(new MessageAnimator(this.tr.getPlus10DeMonteString(), 30));
@@ -290,45 +266,36 @@ public class TuteGameUI {
         for (Suit suit : Suit.values()) {
             Declaration declaration = this.game.getDeclaration(suit);
 
-            if (declaration == Declaration.Player2) {
+            if (declaration == Declaration.PLAYER_2) {
                 this.controller.add(new WaitAnimator(15));
 
                 int points = suit == TuteGameUI.this.game.getPinta().suit ? 40 : 20;
 
-                this.controller.add(new AnimationController.Animator() {
-                    @Override
-                    public boolean tick() {
-                        TuteGameUI.this.player2Points += points;
-                        return true;
-                    }
+                this.controller.add(() -> {
+                    TuteGameUI.this.player2Points += points;
+                    return true;
                 });
 
                 this.controller.add(new MessageAnimator(this.tr.getPlusTwentyFortyPointsString(points, suit), 30));
             }
         }
 
-        this.controller.add(new AnimationController.Animator() {
-            @Override
-            public boolean tick() {
-                TuteGameUI.this.game.countPointsAndRestart(player1WonLastTrick);
+        this.controller.add(() -> {
+            TuteGameUI.this.game.countPointsAndRestart(player1WonLastTrick);
 
-                return true;
-            }
+            return true;
         });
 
         this.controller.add(new WaitAnimator(100));
 
         this.controller.add(this.controller.getCenterCardMove(this.game.getCardRasters()));
 
-        this.controller.add(new AnimationController.Animator() {
-            @Override
-            public boolean tick() {
-                TuteGameUI.this.player1Points = TuteGameUI.this.player2Points = -1;
+        this.controller.add(() -> {
+            TuteGameUI.this.player1Points = TuteGameUI.this.player2Points = -1;
 
-                TuteGameUI.this.initialize();
+            TuteGameUI.this.initialize();
 
-                return true;
-            }
+            return true;
         });
     }
 
@@ -356,24 +323,18 @@ public class TuteGameUI {
 
                 this.controller.add(this.controller.getPintaMovement(this.game.getPinta()));
 
-                this.controller.add(new AnimationController.Animator() {
-                    @Override
-                    public boolean tick() {
-                        TuteGameUI.this.fireWaitForUserClick(true);
+                this.controller.add(() -> {
+                    TuteGameUI.this.fireWaitForUserClick(true);
 
-                        return true;
-                    }
+                    return true;
                 });
             } else if (movement instanceof TuteMovement) {
-                this.tute(((TuteMovement) movement).getRank());
+                this.tute(((TuteMovement) movement).rank());
 
-                this.controller.add(new AnimationController.Animator() {
-                    @Override
-                    public boolean tick() {
-                        TuteGameUI.this.fireWaitForUserClick(true);
+                this.controller.add(() -> {
+                    TuteGameUI.this.fireWaitForUserClick(true);
 
-                        return true;
-                    }
+                    return true;
                 });
             } else if (movement instanceof TwentyFortyMovement) {
                 Suit declarationSuit = ((TwentyFortyMovement) movement).getSuit();
@@ -383,16 +344,13 @@ public class TuteGameUI {
                 this.controller.add(new MessageAnimator(
                         this.tr.getTwentyFortyDeclarationString(this.game.getPinta().suit, declarationSuit), 100));
 
-                this.controller.add(new AnimationController.Animator() {
-                    @Override
-                    public boolean tick() {
-                        TuteGameUI.this.fireWaitForUserClick(true);
+                this.controller.add(() -> {
+                    TuteGameUI.this.fireWaitForUserClick(true);
 
-                        return true;
-                    }
+                    return true;
                 });
             } else if (movement instanceof ThrowMovement) {
-                Card currentCard = ((ThrowMovement) movement).getCurrentCard();
+                Card currentCard = ((ThrowMovement) movement).currentCard();
 
                 this.controller.add(new MoveToFrontAnimator(currentCard));
 
@@ -412,7 +370,7 @@ public class TuteGameUI {
 
                 playTurn.playTurn(currentCard, player2Card, player1Wins);
             } else if (movement instanceof ThrowResponseMovement) {
-                Card currentCard = ((ThrowResponseMovement) movement).getCurrentCard();
+                Card currentCard = ((ThrowResponseMovement) movement).currentCard();
 
                 this.controller.add(new MoveToFrontAnimator(currentCard));
 
@@ -442,15 +400,11 @@ public class TuteGameUI {
         this.controller.repaint();
     }
 
-    public void setFrame(JFrame frame) {
-        this.Frame = frame;
-    }
-
-    public String refreshCardsRemain(String remaningCards) {
+    public String refreshRemainingCards(String remaningCards) {
         final Languages lg = new Languages();
-        final Translator tr = Translator.get(lg.getDefaultLanguage());
-        RefreshCardsRemain = true;
+        final Translator translator = Translator.get(lg.getDefaultLanguage());
+        refreshCardsRemain = true;
 
-        return tr.getCardsRemainText(remaningCards);
+        return translator.getCardsRemainText(remaningCards);
     }
 }

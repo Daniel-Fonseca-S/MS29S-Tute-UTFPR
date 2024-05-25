@@ -10,17 +10,16 @@ public class AnimationController implements ActionListener {
         boolean tick();
     }
 
-    final private JPanel panel;
+    private final JPanel panel;
 
-    final private Timer t = new Timer(20, this);
-
-    final private ArrayList<Animator> animators = new ArrayList<Animator>();
+    private final ArrayList<Animator> animators = new ArrayList<>();
 
     public AnimationController(JPanel panel) {
         this.panel = panel;
 
-        this.t.setRepeats(true);
-        this.t.start();
+        Timer t = new Timer(20, this);
+        t.setRepeats(true);
+        t.start();
     }
 
     public void add(Animator animator) {

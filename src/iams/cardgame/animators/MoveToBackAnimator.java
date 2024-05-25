@@ -3,7 +3,7 @@ package iams.cardgame.animators;
 import iams.cardgame.tute.Card;
 
 public class MoveToBackAnimator implements AnimationController.Animator {
-    final private Card card;
+    private final Card card;
 
     public MoveToBackAnimator(Card card) {
         this.card = card;

@@ -26,50 +26,32 @@ public class TranslatorEs extends Translator {
 
     @Override
     public String getSuitName(Suit suit) {
-        switch (suit) {
-            case Batons:
-                return "Bastos";
-            case Cups:
-                return "Copas";
-            case Swords:
-                return "Espadas";
-            case Coins:
-                return "Oros";
-            default:
-                throw new AssertionError();
-        }
+        return switch (suit) {
+            case BATONS -> "Bastos";
+            case CUPS -> "Copas";
+            case SWORDS -> "Espadas";
+            case COINS -> "Oros";
+            default -> throw new AssertionError();
+        };
     }
 
     @Override
     public String getRankName(Rank rank) {
-        switch (rank) {
-            case Ace:
-                return "As";
-            case V2:
-                return "Dos";
-            case V3:
-                return "Tres";
-            case V4:
-                return "Cuatro";
-            case V5:
-                return "Cinco";
-            case V6:
-                return "Seis";
-            case V7:
-                return "Siete";
-            case V8:
-                return "Ocho";
-            case V9:
-                return "Nueve";
-            case Knave:
-                return "Sota";
-            case Knight:
-                return "Caballo";
-            case King:
-                return "Rey";
-            default:
-                return rank.name();
-        }
+        return switch (rank) {
+            case ACE -> "As";
+            case V2 -> "Dos";
+            case V3 -> "Tres";
+            case V4 -> "Cuatro";
+            case V5 -> "Cinco";
+            case V6 -> "Seis";
+            case V7 -> "Siete";
+            case V8 -> "Ocho";
+            case V9 -> "Nueve";
+            case KNAVE -> "Sota";
+            case KNIGHT -> "Caballo";
+            case KING -> "Rey";
+            default -> rank.name();
+        };
     }
 
     @Override
@@ -89,7 +71,7 @@ public class TranslatorEs extends Translator {
 
     @Override
     public String getTuteDeclarationString(Rank rank) {
-        return "Tute de " + (rank == Rank.King ? "Reyes" : "Caballos");
+        return "Tute de " + (rank == Rank.KING ? "Reyes" : "Caballos");
     }
 
     @Override
@@ -117,36 +99,22 @@ public class TranslatorEs extends Translator {
 
     @Override
     public String getMenuItemNames(String key) {
-        switch (key) {
-            case "OPTIONS":
-                return "Opciones";
-            case "RESTART":
-                return "Reiniciar";
-            case "QUIT":
-                return "Abandonar el juego";
-            case "GAME":
-                return "Juego";
-            case "RULES":
-                return "Normas";
-            case "LANGUAGES":
-                return "Idiomas";
-            case "PORTUGUESE":
-                return "Portugués (BR)";
-            case "ENGLISH":
-                return "Inglés";
-            case "SPANISH":
-                return "Español";
-            case "COLORBACKGROUND":
-                return "Color de fondo";
-            case "GREEN":
-                return "Verde";
-            case "RED":
-                return "Rojo";
-            case "BLUE":
-                return "Azul";
-            default:
-                throw new AssertionError();
-        }
+        return switch (key) {
+            case "OPTIONS" -> "Opciones";
+            case "RESTART" -> "Reiniciar";
+            case "QUIT" -> "Abandonar el juego";
+            case "GAME" -> "Juego";
+            case "RULES" -> "Normas";
+            case "LANGUAGES" -> "Idiomas";
+            case "PORTUGUESE" -> "Portugués (BR)";
+            case "ENGLISH" -> "Inglés";
+            case "SPANISH" -> "Español";
+            case "COLORBACKGROUND" -> "Color de fondo";
+            case "GREEN" -> "Verde";
+            case "RED" -> "Rojo";
+            case "BLUE" -> "Azul";
+            default -> throw new AssertionError();
+        };
     }
 
     @Override
@@ -157,7 +125,7 @@ public class TranslatorEs extends Translator {
             ex.printStackTrace();
         }
 
-        return new String();
+        return "";
     }
 
     @Override

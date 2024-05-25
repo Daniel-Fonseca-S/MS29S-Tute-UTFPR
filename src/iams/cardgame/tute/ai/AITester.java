@@ -7,7 +7,7 @@ import iams.cardgame.tute.TuteGame;
 import iams.cardgame.tute.TuteGamePlayerContext;
 
 public class AITester {
-    static public void main(String[] args) {
+    public static void main(String[] args) {
         final int TOTAL_GAMES = 20000;
 
         TuteGame game = new TuteGame();
@@ -44,16 +44,16 @@ public class AITester {
                             if (game.getDeclaration(declarationSuit) != null)
                                 continue;
 
-                            Card knight = game.hasCard(Rank.Knight, declarationSuit, game.getPlayer1Cards());
-                            Card king = game.hasCard(Rank.King, declarationSuit, game.getPlayer1Cards());
+                            Card knight = game.hasCard(Rank.KNIGHT, declarationSuit, game.getPlayer1Cards());
+                            Card king = game.hasCard(Rank.KING, declarationSuit, game.getPlayer1Cards());
 
                             if (knight != null && king != null) {
                                 game.declare(declarationSuit);
                             }
                         }
 
-                        if (game.canDeclareTute(Rank.King, game.getPlayer1Cards()) ||
-                                game.canDeclareTute(Rank.Knight, game.getPlayer1Cards())) {
+                        if (game.canDeclareTute(Rank.KING, game.getPlayer1Cards()) ||
+                                game.canDeclareTute(Rank.KNIGHT, game.getPlayer1Cards())) {
                             game.declareTute();
                             break;
                         }
@@ -70,16 +70,16 @@ public class AITester {
                             if (game.getDeclaration(declarationSuit) != null)
                                 continue;
 
-                            Card knight = game.hasCard(Rank.Knight, declarationSuit, game.getPlayer2Cards());
-                            Card king = game.hasCard(Rank.King, declarationSuit, game.getPlayer2Cards());
+                            Card knight = game.hasCard(Rank.KNIGHT, declarationSuit, game.getPlayer2Cards());
+                            Card king = game.hasCard(Rank.KING, declarationSuit, game.getPlayer2Cards());
 
                             if (knight != null && king != null) {
                                 game.declare(declarationSuit);
                             }
                         }
 
-                        if (game.canDeclareTute(Rank.King, game.getPlayer2Cards()) ||
-                                game.canDeclareTute(Rank.Knight, game.getPlayer2Cards())) {
+                        if (game.canDeclareTute(Rank.KING, game.getPlayer2Cards()) ||
+                                game.canDeclareTute(Rank.KNIGHT, game.getPlayer2Cards())) {
                             game.declareTute();
                             break;
                         }
