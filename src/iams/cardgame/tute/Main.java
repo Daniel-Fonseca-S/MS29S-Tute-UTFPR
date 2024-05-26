@@ -16,7 +16,7 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 
 public class Main extends GraphicsPanel {
-    Languages lg = new Languages();
+    Languages lg  = new Languages();
 
     public final Translator tr = Translator.get(lg.getDefaultLanguage());
 
@@ -38,7 +38,7 @@ public class Main extends GraphicsPanel {
 
     private final TuteGameUI gameUI = new TuteGameUI(this.tr, this.game, this.controller, this.humanPlayer);
 
-    private final GameMouseListener mouseListener = new GameMouseListener(this, this.game, this.gameUI, this.humanPlayer);
+    private final GameMouseListener gameMouseListener = new GameMouseListener(this, this.game, this.gameUI, this.humanPlayer);
 
     public Main() {
         this.addComponentListener(new ComponentAdapter() {
@@ -53,13 +53,13 @@ public class Main extends GraphicsPanel {
             }
         });
 
-        this.addMouseListener(this.mouseListener);
-        this.addMouseMotionListener(this.mouseListener);
+        this.addMouseListener(this.gameMouseListener);
+        this.addMouseMotionListener(this.gameMouseListener);
     }
 
     @Override
     protected void paint(Graphics2D g2, AffineTransform tx2) {
-        this.mouseListener.mouseMoved();
+        this.gameMouseListener.mouseMoved();
 
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
@@ -158,6 +158,15 @@ public class Main extends GraphicsPanel {
         frame.setExtendedState(Frame.MAXIMIZED_BOTH);
         frame.add(new Main());
         frame.setLocationByPlatform(true);
+        frame.setMinimumSize(new Dimension(800, 500));
+
+        frame.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                Rectangle b = frame.getBounds();
+                frame.setBounds(b.x, b.y, b.width, b.width * 9 / 16);
+            }
+        });
 
         JMenuBar menuBar = new JMenuBar();
 
