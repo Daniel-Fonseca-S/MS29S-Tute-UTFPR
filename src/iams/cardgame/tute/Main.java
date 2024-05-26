@@ -163,8 +163,10 @@ public class Main extends GraphicsPanel {
         frame.addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
-                Rectangle b = frame.getBounds();
-                frame.setBounds(b.x, b.y, b.width, b.width * 9 / 16);
+                if (frame.getExtendedState() != Frame.MAXIMIZED_BOTH) {
+                    Rectangle b = frame.getBounds();
+                    frame.setBounds(b.x, b.y, b.width, b.width * 9 / 16);
+                }
             }
         });
 
