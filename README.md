@@ -37,6 +37,64 @@ O Tute é um jogo de cartas muito popular na Espanha. Existem várias versões d
 ## Tecnologias Utilizadas
 - Java JDK 18
 
+## Estrutura do Projeto
+```text
+📦MS29S-Tute-UTFPR
+ ┣ 📂bin -> Arquivos binários
+ ┣ 📂classes -> Arquivos compilados
+ ┣ 📂src -> Código fonte
+ ┃ ┣ 📂iams -> Pacote principal
+ ┃ ┃ ┣ 📂cardgame -> Código Lógico do Jogo
+ ┃ ┃ ┃ ┣ 📂animators -> Classes relacionadas à animação
+ ┃ ┃ ┃ ┃ ┣ 📜AnimationController.java
+ ┃ ┃ ┃ ┃ ┣ 📜MoveCardAnimator.java
+ ┃ ┃ ┃ ┃ ┣ 📜MoveToBackAnimator.java
+ ┃ ┃ ┃ ┃ ┣ 📜MoveToFrontAnimator.java
+ ┃ ┃ ┃ ┃ ┣ 📜MultiAnimator.java
+ ┃ ┃ ┃ ┃ ┣ 📜ReverseAnimator.java
+ ┃ ┃ ┃ ┃ ┣ 📜ThrowCardAnimator.java
+ ┃ ┃ ┃ ┃ ┗ 📜WaitAnimator.java
+ ┃ ┃ ┃ ┣ 📂tute -> Definição do jogo Tute
+ ┃ ┃ ┃ ┃ ┣ 📂ai -> Classes relacionadas à inteligência artificial
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜AITester.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜BasicTuteAI.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜SmartTuteAI.java
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜TuteAI.java
+ ┃ ┃ ┃ ┃ ┣ 📂movement -> Classes relacionadas aos movimentos do jogo
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜Movement.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜PintaMovement.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜ThrowMovement.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜ThrowResponseMovement.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜TuteMovement.java
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜TwentyFortyMovement.java
+ ┃ ┃ ┃ ┃ ┣ 📂tr -> Classes relacionadas a tradução
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜Normas.txt
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜Regras.txt
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜Rules.txt
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜Translator.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜TranslatorEn.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜TranslatorEs.java
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜TranslatorPtBr.java
+ ┃ ┃ ┃ ┃ ┣ 📜Card.java
+ ┃ ┃ ┃ ┃ ┣ 📜CardModel.java
+ ┃ ┃ ┃ ┃ ┣ 📜GameMouseListener.java
+ ┃ ┃ ┃ ┃ ┣ 📜HumanPlayer.java
+ ┃ ┃ ┃ ┃ ┣ 📜Languages.java
+ ┃ ┃ ┃ ┃ ┣ 📜Main.java -> Classe principal
+ ┃ ┃ ┃ ┃ ┣ 📜PlayTurn.java
+ ┃ ┃ ┃ ┃ ┣ 📜RulesController.java
+ ┃ ┃ ┃ ┃ ┣ 📜spanish-deck.png
+ ┃ ┃ ┃ ┃ ┣ 📜TuteController.java
+ ┃ ┃ ┃ ┃ ┣ 📜TuteGame.java
+ ┃ ┃ ┃ ┃ ┣ 📜TuteGamePlayerContext.java
+ ┃ ┃ ┃ ┃ ┗ 📜TuteGameUI.java
+ ┃ ┃ ┃ ┣ 📜icon.png
+ ┃ ┃ ┃ ┗ 📜iconhq.png
+ ┃ ┃ ┗ 📂ui -> Recursos da interface do usuário
+ ┃ ┃   ┗ 📜GraphicsPanel.java
+ ┗ 📜README.md
+```
+
 ## Contribuidores
 - Daniel Fonseca da Silva
 - Davi Gil Brito Vaz Takayama
