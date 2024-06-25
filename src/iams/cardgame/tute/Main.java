@@ -3,17 +3,22 @@ package iams.cardgame.tute;
 import iams.cardgame.tute.tr.Translator;
 import iams.ui.GraphicsPanel;
 
+import javax.accessibility.Accessible;
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
 import java.awt.*;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Rectangle2D;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
+import java.util.jar.JarFile;
 
 public class Main extends GraphicsPanel {
     Languages lg  = new Languages();
@@ -188,6 +193,10 @@ public class Main extends GraphicsPanel {
         JMenuItem backgroundRed = new JMenuItem(tr.getMenuItemNames("RED"));
         JMenuItem backgroundBlue = new JMenuItem(tr.getMenuItemNames("BLUE"));
 
+        JPanel painel = new JPanel();
+        JPanel containerPanel = new JPanel(new BorderLayout());
+        JPanel buttonPanel = new JPanel();
+
         menuBar.add(game);
         menuBar.add(options);
 
@@ -203,21 +212,57 @@ public class Main extends GraphicsPanel {
         colorBackground.add(backgroundGreen);
         colorBackground.add(backgroundRed);
         colorBackground.add(backgroundBlue);
+        painel.setBackground(color);
+        containerPanel.setBackground(color);
+        buttonPanel.setBackground(color);
 
         backgroundGreen.addActionListener(e -> {
             color = new Color(13, 98, 69);
             frame.paint(frame.getGraphics());
+            painel.setBackground(color);
+            containerPanel.setBackground(color);
+            buttonPanel.setBackground(color);
         });
 
         backgroundRed.addActionListener(e -> {
             color = new Color(92, 0, 27);
             frame.paint(frame.getGraphics());
+            painel.setBackground(color);
+            containerPanel.setBackground(color);
+            buttonPanel.setBackground(color);
         });
 
         backgroundBlue.addActionListener(e -> {
             color = new Color(0, 53, 95);
             frame.paint(frame.getGraphics());
+            painel.setBackground(color);
+            containerPanel.setBackground(color);
+            buttonPanel.setBackground(color);
         });
+
+        String[] hierarquia_cartas = {
+                "Ás : Vale 11 pontos",
+                "3 : Vale 10 pontos",
+                "Rei : Vale 4 pontos",
+                "Cavalo : Vale 3 pontos",
+                "Valete : Vale 2 pontos",
+                "7, 6 , 5, 4, 2 : Vale 0 pontos"};
+
+        // Cria o painel de hierarquia
+
+        painel.setLayout(new GridLayout(hierarquia_cartas.length + 1, 1));
+        TitledBorder titledBorder = BorderFactory.createTitledBorder("Hierarquia das Cartas");
+        titledBorder.setTitleColor(Color.WHITE);
+        painel.setBorder(titledBorder);
+
+        // Adiciona os componentes ao painel
+        for (int i = 0; i < hierarquia_cartas.length; i++) {
+            JLabel label = new JLabel(hierarquia_cartas[i]);
+            label.setFont(new Font("Arial", Font.BOLD, 18));
+            label.setHorizontalAlignment(SwingConstants.CENTER);
+            label.setForeground(Color.WHITE);
+            painel.add(label);
+        }
 
         rules.addActionListener(e -> {
             try {
@@ -251,6 +296,30 @@ public class Main extends GraphicsPanel {
         } catch (IOException e1) {
             e1.printStackTrace();
         }
+
+        JToggleButton toggleButton = new JToggleButton("Mostrar/Esconder Hierarquia");
+        toggleButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (toggleButton.isSelected()) {
+                    containerPanel.add(painel, BorderLayout.CENTER);
+                } else {
+                    containerPanel.remove(painel);
+                }
+                containerPanel.revalidate();
+                containerPanel.repaint();
+            }
+        });
+        toggleButton.setPreferredSize(new Dimension(200, 30));
+        toggleButton.setMaximumSize(new Dimension(200, 30));
+        toggleButton.setMinimumSize(new Dimension(200, 30));
+
+
+        buttonPanel.add(toggleButton, BorderLayout.WEST);
+
+
+        frame.add(buttonPanel, BorderLayout.NORTH);
+        frame.add(containerPanel, BorderLayout.WEST);
 
         frame.setJMenuBar(menuBar);
         frame.setVisible(true);
