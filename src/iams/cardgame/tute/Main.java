@@ -6,6 +6,7 @@ import iams.ui.GraphicsPanel;
 import javax.accessibility.Accessible;
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.awt.event.*;
@@ -195,7 +196,7 @@ public class Main extends GraphicsPanel {
 
         JPanel painel = new JPanel();
         JPanel containerPanel = new JPanel(new BorderLayout());
-        JPanel buttonPanel = new JPanel();
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
 
         menuBar.add(game);
         menuBar.add(options);
@@ -246,13 +247,12 @@ public class Main extends GraphicsPanel {
                 "Rei : Vale 4 pontos",
                 "Cavalo : Vale 3 pontos",
                 "Valete : Vale 2 pontos",
-                "7, 6 , 5, 4, 2 : Vale 0 pontos"};
-
-        // Cria o painel de hierarquia
+                "   7, 6 , 5, 4, 2 : Vale 0 pontos   "};
 
         painel.setLayout(new GridLayout(hierarquia_cartas.length + 1, 1));
         TitledBorder titledBorder = BorderFactory.createTitledBorder("Hierarquia das Cartas");
         titledBorder.setTitleColor(Color.WHITE);
+        containerPanel.setBorder(new EmptyBorder(0, 5, 0, 0));
         painel.setBorder(titledBorder);
 
         // Adiciona os componentes ao painel
@@ -314,10 +314,7 @@ public class Main extends GraphicsPanel {
         toggleButton.setMaximumSize(new Dimension(200, 30));
         toggleButton.setMinimumSize(new Dimension(200, 30));
 
-
         buttonPanel.add(toggleButton, BorderLayout.WEST);
-
-
         frame.add(buttonPanel, BorderLayout.NORTH);
         frame.add(containerPanel, BorderLayout.WEST);
 
