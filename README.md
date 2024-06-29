@@ -101,6 +101,19 @@ O Tute é um jogo de cartas muito popular na Espanha. Existem várias versões d
 - João Pedro dos Santos Batista
 - Paulo Moschen
 
+## Melhorias Conduzidas
+- Adicionada documentação geral ao repositório do projeto;
+- Corrigido a ausência de limite mínimo ao tamanho da janela quando não maximizado, e adicionada expansão proporcional da janela ao redimensionar;
+- Mudar a cor do plano de fundo não reinicia mais o jogo;
+- Implementado botão que exibe a hierarquia das cartas em meio à partida;
+- Removido arquivos da versão JavaScript do projeto e demais arquivos gerados altomaticamente, assim como código morto.
+
+## Possíveis melhorias futuras
+- Refatoração semântica do código para se adaptar a definição da linguagem Java;
+- Melhoria visual no botão de exibir hierarquia das cartas;
+- Traduzir conteúdo do menu de hierarquia para os demais idiomas;
+- Ajustar menu de hierarquia para diferentes tamanhos de janela.
+
 ## Licença
 Este projeto está licenciado sob a Licença MIT.
 
